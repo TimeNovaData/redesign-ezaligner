@@ -1,0 +1,751 @@
+.modal__container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    animation: sobeModal .3s forwards;
+}
+
+/* ESTADO EM QUE O MODAL É ATIVADO*/
+.modal__container.sobeModal {
+    display: flex;
+}
+
+
+
+/* MODAL EVENTO INSCRICAO*/
+.modal__curso {
+    background: $cor-primaria;
+    padding: 64px 40px;
+    box-shadow: 0px 56px 72px -16px rgba(149, 106, 167, 0.4);
+    border-radius: 16px;
+    position: relative;
+    width: 850px;
+    display: flex;
+
+    animation: vem .3s forwards;
+
+    @include d(m) {
+        flex-direction: column;
+        padding: rem(24) rem(16) rem(16) rem(16);
+        width: 95%;
+        max-height: auto;
+        overflow: scroll;
+    }
+
+    @include d(s) {
+        max-height: 90vh;
+    }
+
+    .modal__curso-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        max-width: 90%;
+
+        @include d(m) {
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+        }
+    }
+
+    &-navegacao {
+        display: flex;
+        justify-content: flex-end;
+
+        @include d(m) {
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: rem(16);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        p {
+            display: none;
+            font-size: rem(16);
+            line-height: 160%;
+            color: $cor-branco;
+
+            @include d(m) {
+                display: block;
+            }
+        }
+
+        .fechar {
+            position: absolute;
+            right: 32px;
+            top: 24px;
+
+            @include d(m) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: initial;
+            }
+
+            ion-icon {
+                font-size: rem(42);
+                color: $cor-branco;
+
+                @include d(s) {
+                    font-size: rem(32);
+                }
+            }
+        }
+    }
+
+    &-foto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-right: 32px;
+
+        @include d(m) {
+            flex-direction: row;
+            padding-right: 16px;
+            padding: rem(24) 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        img {
+            border-radius: 8px;
+            object-fit: cover;
+            width: 100%;
+
+            @include d(m) {
+                max-width: rem(170);
+                max-height: rem(190);
+            }
+        }
+
+        &-texto {
+            border-radius: 8px;
+            text-align: center;
+
+            @include d(m) {
+                text-align: left;
+                margin-left: 16px;
+            }
+
+            p {
+                font-size: rem(18);
+                font-weight: 600;
+                color: $cor-branco;
+                padding: rem(8) 0;
+
+                @include d(m) {
+                    font-size: rem(16);
+                }
+            }
+
+            span {
+                color: $cor-branco;
+                font-size: rem(18);
+                font-weight: 400;
+                color: $cor-background;
+                padding-top: rem(80);
+
+                @include d(m) {
+                    font-size: rem(16);
+                }
+            }
+        }
+    }
+
+
+    &-descricao {
+        &-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            background: $cor-roxo-escuro;
+            padding: rem(24) rem(16);
+            border-radius: 8px;
+            overflow-y: scroll;
+            max-height: 250px;
+            @include scrollbars(6px, $cor-azul, mix(#4F4468, #4F4468, 0%));
+
+            @include d(m) {
+                background-color: $cor-primaria;
+                max-height: 100%;
+                overflow: auto;
+                padding: rem(32) 0;
+            }
+
+
+            .data {
+                font-size: rem(16);
+                font-weight: 600;
+                color: $cor-azul;
+                padding-bottom: rem(8);
+
+                @include d(s) {
+                    font-size: rem(14);
+                }
+            }
+
+            .nome__curso {
+                color: $cor-branco;
+                font-size: rem(24);
+                font-weight: 600;
+                line-height: 160%;
+                padding-bottom: rem(32);
+
+                @include d(m) {
+                    padding-bottom: rem(24);
+                    font-size: rem(18);
+                }
+            }
+
+            .horario {
+                padding-bottom: rem(24);
+
+                @include d(m) {
+                    padding-bottom: rem(16);
+                }
+
+                span {
+                    font-weight: 600;
+                    color: $cor-branco;
+                    font-size: rem(16);
+                    line-height: 160%;
+
+                    @include d(s) {
+                        font-size: rem(14);
+                    }
+                }
+
+                p {
+                    font-weight: 400;
+                    color: rgba(255, 255, 255, 0.8);
+                    font-size: rem(16);
+                    line-height: 160%;
+
+                    @include d(s) {
+                        font-size: rem(14);
+                    }
+                }
+            }
+
+            .local {
+                padding-bottom: rem(24);
+
+                @include d(m) {
+                    padding-bottom: rem(16);
+                }
+
+                span {
+                    font-weight: 600;
+                    color: $cor-branco;
+                    font-size: rem(16);
+                    line-height: 160%;
+
+                    @include d(s) {
+                        font-size: rem(14);
+                    }
+                }
+
+                p {
+                    font-weight: 400;
+                    color: rgba(255, 255, 255, 0.8);
+                    font-size: rem(16);
+                    line-height: 160%;
+
+                    @include d(s) {
+                        font-size: rem(14);
+                    }
+                }
+            }
+
+            .programa {
+                padding-bottom: rem(24);
+
+                @include d(m) {
+                    padding-bottom: rem(16);
+                }
+
+                span {
+                    font-weight: 600;
+                    color: $cor-branco;
+                    font-size: rem(16);
+                    line-height: 160%;
+
+                    @include d(s) {
+                        font-size: rem(14);
+                    }
+                }
+
+                p {
+                    font-weight: 400;
+                    color: rgba(255, 255, 255, 0.8);
+                    font-size: rem(16);
+                    line-height: 160%;
+
+                    @include d(s) {
+                        font-size: rem(14);
+                    }
+                }
+            }
+        }
+
+        .btn__inscricao {
+            @include botao($cor-primaria);
+            background: $cor-branco;
+            padding: rem(18) rem(64);
+            margin-top: 40px;
+
+            @include d(m) {
+                margin: 0 auto;
+                border-radius: 8px;
+            }
+
+            @include d(s) {
+                width: 100%;
+
+            }
+        }
+
+    }
+}
+
+
+/* MODAL FORMULÁRIO DE INSCRIÇÃO */
+.modal__inscricao {
+    background-color: $cor-primaria;
+    width: 875px;
+    box-shadow: 0px 56px 72px -16px rgba(149, 106, 167, 0.4);
+    border-radius: 16px;
+    position: absolute;
+    display: none;
+    overflow: auto;
+    padding: rem(32) 0;
+    animation: vem .3s forwards;
+    @media (max-height: 768px) and (min-height: 600px) {
+        max-height: 90vh;
+    }
+
+    @include d(m) {
+        flex-direction: column;
+        //padding: rem(24) rem(16) rem(16) rem(16);
+        width: 95%;
+        max-height: 90vh;
+        overflow: scroll;
+    }
+
+    @include d(s) {
+        padding: rem(24) 0;
+
+    }
+
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        &-navegacao {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+            &-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                padding: 0 rem(40) rem(24) rem(40);
+                @include d(s) {
+                    align-items: flex-start;
+                    padding: 0 rem(16) rem(24) rem(16);
+                }
+
+                &-texto {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    span {
+                        padding-top: rem(8);
+                        font-size: rem(14);
+                        text-align: center;
+                        color: rgba(255, 255, 255, 0.7);
+
+                        @include d(s) {
+                            font-size: rem(12);
+                        }
+
+                        a {
+                            color: $cor-branco;
+                            font-weight: 500;
+                        }
+                    }
+
+                }
+            }
+
+            .voltar {
+                img {
+                    @include d(s) {
+                        max-width: 22px;
+                    }
+                }
+
+            }
+
+            .fechar {
+                img {
+                    @include d(s) {
+                        max-width: 16px;
+                    }
+                }
+            }
+
+            p {
+                font-size: rem(18);
+                font-weight: 600;
+                line-height: 160%;
+                color: $cor-branco;
+            }
+        }
+
+        &-conteudo {
+            padding: rem(32) rem(40) 0 rem(40);
+            @include d(s) {
+                padding: rem(24) rem(16) 0 rem(16);
+
+            }
+
+            &-info {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+
+                .data {
+                    font-size: rem(16);
+                    font-weight: 600;
+                    color: $cor-azul;
+                    padding-bottom: rem(8);
+                    @include d(s) {
+                        font-size: rem(14);
+                    }
+                }
+
+                .nome__curso {
+                    color: $cor-branco;
+                    font-size: rem(24);
+                    font-weight: 600;
+                    line-height: 160%;
+
+                    @include d(m) {
+                        font-size: rem(18);
+                    }
+                }
+            }
+
+            &-formulario {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-column-gap: 32px;
+                padding-top: rem(24);
+
+                @include d(m) {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .primeiro {
+                    grid-column: span 2;
+                }
+
+                .input__box {
+                    position: relative;
+                    width: 100%;
+                    &:not(:last-child) {
+                        margin-bottom: 24px;
+                    }
+
+                    input {
+                        width: 100%;
+                        padding: 24px;
+                        border: 1px solid $cor-branco;
+                        border-radius: 36px;
+                        font-size: rem(16);
+                        background: $cor-primaria;
+                        color: $cor-branco;
+                        &::placeholder {
+                            font-size: rem(16);
+                            color: rgba(255, 255, 255, 0.7);
+                        }
+                    }
+
+                    span {
+                        position: absolute;
+                        left: 24px;
+                        top: 24px;
+                        color: rgba(255, 255, 255, 0.7);
+                        font-size: rem(16);
+                        transition: .4s ease-in-out;
+                        pointer-events: none;
+                    }
+
+                    input:focus~span {
+                        transform: translateY(-32px) translateX(-16px);
+                        font-size: rem(12);
+                    }
+
+                    /*input:focus~span {
+                transform: translateY(-32px) translateX(-16px);
+                font-size: rem(12);
+            }*/
+                }
+
+                /* estilo tooltip*/
+                .cro {
+                    position: relative;
+
+                    #tooltip__info {
+                        position: absolute;
+                        top: 24px;
+                        right: 18px;
+
+                        img {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+
+                }
+
+                .input__select {
+                    width: 100%;
+                    position: relative;
+
+                    &::after {
+                        content: 'expand_more';
+                        font-family: 'material icons';
+                        position: absolute;
+                        top: 18%;
+                        right: 24px;
+                        pointer-events: none;
+                        font-size: 24px;
+                        color: $cor-branco;
+
+                        @include d(m) {
+                            top: 16px;
+                        }
+
+                        @include d(s) {
+                            top: 24px;
+                            font-size: 18px;
+                        }
+                    }
+
+                    select {
+                        width: 100%;
+                        padding: 24px;
+                        border: 1px solid $cor-branco;
+                        border-radius: 36px;
+                        font-size: rem(16);
+                        color: rgba(255, 255, 255, 0.7);
+                        background: $cor-primaria;
+                        font-size: rem(16);
+                        overflow: hidden;
+                        white-space: pre-wrap;
+                        text-overflow: ellipsis;
+                        -webkit-appearance: none;
+
+                        @include d(m) {
+                            margin-bottom: 24px;
+                        }
+                    }
+
+
+                }
+
+                /*input:valid~span{
+            transform: translateY(-32px) translateX(-24px);
+            font-size: rem(12);
+        }*/
+                &-termos {
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: 16px;
+                    grid-column: span 2;
+
+                    @include d(m) {
+                        padding-left: 8px;
+                    }
+
+                    &-item {
+                        display: flex;
+                        align-items: center;
+
+                        &:not(:last-child) {
+                            margin-bottom: 16px;
+                        }
+
+                        input {
+                            border: 1px solid #B890DC;
+                            padding: .5rem;
+                            margin-right: 8px;
+                            border-radius: 4px;
+
+                            &:checked {
+                                background: $cor-branco;
+                            }
+                        }
+
+                        label {
+                            color: rgba(255, 255, 255, 0.7);
+                            font-weight: 500;
+
+                            a {
+                                color: $cor-branco;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+
+                }
+
+                .btn__container {
+                    display: flex;
+                    justify-content: center;
+                    grid-column: span 2;
+                    padding-top: rem(40);
+
+                    .btn__enviar {
+                        @include botao($cor-primaria);
+                        padding: rem(24) rem(105);
+                        background-color: $cor-branco;
+
+                        @include d(m) {
+                            margin: 0 auto;
+                            border-radius: 8px;
+                        }
+
+                        @include d(s) {
+                            width: 100%;
+
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+/* MODAL CONFIRMACAO DA INSCRIÇÃO*/
+
+.modal__confirmacao {
+    background: $cor-primaria;
+    background-color: $cor-primaria;
+    width: 600px;
+    box-shadow: 0px 56px 72px -16px rgba(149, 106, 167, 0.4);
+    border-radius: 16px;
+    position: absolute;
+    padding: rem(40);
+    display: none;
+    animation: vem .3s forwards;
+
+    @include d(m) {
+        flex-direction: column;
+        width: 95%;
+        max-height: auto;
+        overflow: scroll;
+    }
+
+    @include d(s) {
+        padding: rem(24) rem(38) rem(64) rem(38);
+    }
+
+
+    &-navegacao {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &-texto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+            padding-top: rem(16);
+            font-size: rem(24);
+            font-weight: 600;
+            line-height: 160%;
+            color: $cor-azul;
+            text-align: center;
+
+            @include d(s) {
+                font-size: rem(18);
+            }
+        }
+    }
+
+    &-evento {
+        padding-top: rem(56);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .data {
+            font-weight: 600;
+            font-size: rem(24);
+            line-height: 160%;
+            color: $cor-branco;
+            padding-bottom: rem(8);
+
+            @include d(s) {
+                font-size: rem(18);
+            }
+
+        }
+
+        .nome__evento {
+            font-weight: 600;
+            font-size: rem(18);
+            line-height: 160%;
+            color: $cor-branco;
+            max-width: 357px;
+
+            @include d(s) {
+                font-size: rem(16);
+            }
+
+        }
+    }
+}
+
+
+@keyframes vem {
+    from {
+        opacity: 0;
+        transform: translate3d(-30px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+
+.modal__container.sobeModal.step2 .modal__curso,
+.modal__container.sobeModal.step3 .modal__curso {
+    display: none;
+}
+
+.modal__container.sobeModal.step2 .modal__inscricao {
+    display: block;
+}
+
+.modal__container.sobeModal.step3 .modal__confirmacao {
+    display: block;
+}

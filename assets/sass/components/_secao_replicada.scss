@@ -1,0 +1,185 @@
+.secao__replicada {
+    background: #F2F5F8;
+
+    .produtos {
+        padding-top: rem(90);
+
+        @include d(m) {
+            padding-top: rem(48);
+        }
+
+
+        .titulo__diferenciado {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            &::after {
+                @include afterTexto($cor-azul);
+            }
+
+            h1 {
+                @include tituloSecoes($cor-rosa);
+                margin-bottom: 16px;
+            }
+
+            img {
+                @include d(m) {
+                    max-width: 170px;
+                }
+            }
+
+
+        }
+
+        &__wrapper {
+            padding-top: rem(64);
+            padding-bottom: rem(160);
+            align-items: stretch;
+
+            @include d(m) {
+                padding-top: rem(48);
+                padding-bottom: rem(90);
+            }
+
+            &-item {
+                @include cardReplicado;
+                p {
+                    min-height: 160px;
+                    @include d(m) {
+                        min-height: 140px;
+                    }
+                }
+            }
+        }
+    }
+
+    .sobre {
+        .titulo__diferenciado {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            &::after {
+                @include afterTexto($cor-azul);
+            }
+
+            h1 {
+                @include tituloSecoes($cor-primaria);
+                margin-bottom: 16px;
+            }
+
+            img {
+                @include d(m) {
+                    max-width: 170px;
+                }
+            }
+        }
+
+        &__wrapper {
+            padding: rem(64) 0 rem(90) 0;
+
+            @include d(m) {
+                padding: rem(64) 0 rem(48) 0;
+            }
+
+            &-item {
+                @include cardReplicado;
+                p {
+                    min-height: 160px;
+                    @include d(m) {
+                        min-height: 115px;
+                    }
+                }
+            }
+        }
+    }
+
+    .seja__parceiro {
+        background: $cor-primaria;
+        padding: rem(90) 0;
+
+        .titulo__diferenciado {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            h1 {
+                @include tituloSecoes($cor-branco);
+                margin-bottom: 16px;
+            }
+
+            img {
+                @include d(m) {
+                    max-width: 170px;
+                }
+            }
+        }
+
+        &-botoes {
+            padding-top: rem(90);
+            display: flex;
+            justify-content: center;
+
+            @include d(m) {
+                flex-direction: column;
+                align-items: center;
+                padding-top: rem(48)
+            }
+
+            .btn__dentista {
+                @include botao($cor-preto-1);
+                background: $cor-azul;
+                padding: rem(20) rem(95);
+                margin-right: 24px;
+                border: 1px solid $cor-azul;
+                position: relative;
+                transition: color .3s ease-in, background .3s ease-in;
+                &:hover,
+                &:focus {
+                    background: $cor-primaria;
+                    color: $cor-azul;
+
+                }
+
+                @include d(m) {
+                    margin-right: 0;
+                    width: 350px;
+                    order: 2;
+                }
+
+                @include d(s) {
+                    width: 100%;
+                }
+            }
+
+
+            .btn__clinica {
+                @include botao($cor-branco);
+                background: $cor-primaria;
+                border: 1px solid $cor-branco;
+                padding: rem(20) rem(45);
+                transition: color .3s ease-in, background .3s ease-in;
+
+                &:hover,
+                &:focus {
+                    background: $cor-branco;
+                    color: $cor-primaria;
+                }
+
+                @include d(m) {
+                    width: 350px;
+                    margin-bottom: 24px;
+                }
+
+                @include d(s) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,851 @@
+// ===================================================
+@import "./variaveis_cores";
+@import "./variaveis_gerais";
+
+@import "./utilities/responsivo";
+@import "./utilities/clamp";
+@import "./utilities/utilitarios";
+
+
+//exemplo de botao pra voce customizar
+@mixin Botao($cor-texto:white, $cor-background) {
+
+    //container
+    //
+    a {
+        display: inline-flex;
+        align-items: center;
+        color: $cor-texto;
+        background: $cor-background;
+        cursor: pointer;
+        font-size: 1.25rem;
+        text-decoration: none;
+
+        //padding sempre no link  para aumentar a zona de contato
+        //icones dentro dos links para ele tbm ser clicavel
+        ion-icon {
+            margin-left: 10px;
+
+        }
+    }
+
+    //hover
+    a {
+        &:hover {}
+
+        &:hover ion-icon {}
+
+
+    }
+
+}
+
+@mixin titulos_1 {
+    display: flex;
+    width: 100%;
+
+    h2 {
+        display: inline-block;
+    }
+}
+
+
+
+
+
+
+
+//==================================================
+
+
+// @mixin botao_example {
+
+//     display: inline-flex;
+//     height: 50px;
+//     align-items: center;
+//     padding: 0 20px;
+//     border-radius: 4px;
+//     justify-content: space-between;
+//     color: white;
+//     border: initial;
+//     cursor: pointer;
+//     background: linear-gradient(89.76deg, #DCBE6D -62.77%, #B68D25 99.8%);
+//     box-shadow: 0px 6px 12px rgba(185, 144, 41, 0.15);
+//     border-radius: 4px;
+//     min-width: 170px;
+//     margin: initial;
+//     transition: .3s ease;
+
+//     &:hover {
+//         box-shadow: 10px 10px 24px rgba(185, 144, 41, 0.25);
+//         transform: translateY(-2px) scale(1.04);
+//     }
+// }
+
+
+// 🖤  swiper
+// @mixin botoes_swiper($bg-direito,) {
+
+//     .swiper-button-next,
+//     .swiper-button-prev {
+//         background: linear-gradient(89.76deg, #DCBE6D -62.77%, #B68D25 99.8%);
+//         box-shadow: 0px 8px 16px 2px rgba(185, 144, 41, 0.1), 0px 16px 32px 2px rgba(185, 144, 41, 0.1);
+//         border-radius: 4px;
+//         height: 30px;
+//         width: 30px;
+
+//         &:after {
+//             content: ""; //remove o botao padrao
+//         }
+
+//         &.swiper-button-disabled {
+//             opacity: 0 !important; //da opacidade 0 quando o botao n ta ativo
+//         }
+
+//         @include d(m) { //remove os botoes no mobile e tablet
+//             display: none;
+//         }
+//     }
+
+//     .swiper-button-next {
+//         &:before {
+//             @include pseudo(absolute); //ja pego o mixin pseudo
+//             background-image: ($bg-direito);
+//             display: grid;
+//             place-items: center;
+//             @include size(40%); 
+//             @include inset;
+//             margin: auto;
+//             position: relative;
+//             left: 1px;
+//         }
+//     }
+
+//     .swiper-button-prev {
+//         &:before {
+//             @include pseudo(absolute);
+//             background-image: url($bg-esquerdo;
+//             display: grid;
+//             place-items: center;
+//             @include size(40%);
+//             @include inset;
+//             margin: auto;
+
+//         }
+//     }
+// }
+
+
+// 🤎
+// @mixin bullet_swiper($bg) {
+
+//     .swiper-pagination-bullet {
+//         background: $($bg);
+//         transition: .150s ease-out;
+
+//         transition-property: width,
+//             border-radius,
+//             scale,
+//             opacity;
+//         transform-origin: left right;
+
+
+//         &-active {
+//             width: 20px !important;
+//             border-radius: 10px !important;
+
+//         }
+//     }
+// }
+
+
+
+
+//texto 
+
+// @mixin gradiente_no_texto {
+//     background: $gradiente-1;
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: transparent;
+// }
+
+// @mixin titulo_das_subpaginas {
+//     text-align: center;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+
+//     h2 {
+//         font-family: $font-1;
+//         font-weight: 700;
+//         font-size: 1.4rem;
+//         color: $cor-marrom;
+//         display: inline-block;
+//         @include center;
+//         margin-bottom: 10px;
+//         letter-spacing: 1px;
+//     }
+
+//     h1 {
+//         font-family: $font-1;
+//         font-weight: 300;
+//         font-size: 2.4rem;
+//         margin-bottom: 0;
+//         padding-bottom: 0;
+//         position: relative;
+//         color: $cor-preto-1;
+
+//         @include d(s) {
+//             font-size: 2rem;
+//         }
+
+//     }
+
+//     h3 {
+//         font-family: $font-1;
+//         font-weight: 600;
+//         font-size: 2rem;
+//         margin-top: 10px;
+//         color: $cor-preto-1;
+
+//         font-weight: 300;
+
+//         @include d(s) {
+//             font-size: 1.5rem;
+
+//         }
+
+//     }
+
+
+// }
+
+
+
+// @mixin card_example() {
+
+//     border-radius: 16px;
+//     border: 1px solid rgba(0, 0, 0, 0.05);
+//     background: white;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     max-width: 320px;
+//     min-width: 320px;
+//     padding: 1.25rem;
+//     min-height: 400px;
+
+//     @include d(m) {
+//         max-width: 20rem;
+//         min-width: 20rem;
+//     }
+
+//     img {
+//         margin-top: 60px;
+//         @include size(100px);
+//         object-fit: contain;
+//     }
+
+//     h2 {
+//         color: $cor-preto-1;
+//         font-size: 1.5rem;
+//         margin-top: 1.25rem;
+//         margin-bottom: 1.25rem;
+//         font-weight: 700;
+//         text-align: center;
+//         @include center;
+//         display: inline-block;
+//     }
+
+//     p {
+//         font-weight: 300;
+//         text-align: center;
+//         @include center;
+//         display: inline-block;
+//         font-size: 1rem;
+//         margin-top: 10px;
+//     }
+// }
+
+
+@mixin tituloSecoes($cor-texto) {
+    font-size: rem(64);
+    line-height: 110%;
+    color: $cor-texto;
+    font-weight: 900;
+    text-align: center;
+    font-style: italic;
+
+    @include d(m) {
+        font-size: rem(32);
+    }
+}
+
+
+@mixin afterTexto($cor) {
+    content: "";
+    display: block;
+    margin: 40px auto 0 auto;
+    background: $cor;
+    width: 80px;
+    height: 8px;
+    border-radius: 4px;
+
+    @include d(m) {
+        margin-top: 24px;
+    }
+}
+
+@mixin beforeTexto($cor) {
+    content: "";
+    display: block;
+    margin: 40px auto 0 auto;
+    background: $cor;
+    width: 80px;
+    height: 8px;
+    border-radius: 4px;
+
+    @include d(m) {
+        margin-top: 24px;
+    }
+}
+
+@mixin botao($cor-texto) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: $cor-texto;
+    font-weight: 600;
+    background: $cor-primaria;
+    border-radius: 36px;
+    position: relative;
+
+}
+
+@mixin tituloReplicado($cor) {
+    font-size: rem(24);
+    font-weight: 600;
+    line-height: 160%;
+    color: $cor;
+    text-align: center;
+
+    @include d(m) {
+        font-size: rem(18);
+    }
+}
+
+@mixin textoReplicado($cor) {
+    line-height: 180%;
+    font-weight: 400;
+    font-size: rem(16);
+    color: $cor;
+    text-align: center;
+
+    @include d(m) {
+        font-size: rem(16);
+    }
+}
+
+@mixin cardReplicado {
+    box-shadow: 0px 16px 24px rgba(149, 106, 167, 0.12);
+    border-radius: 13px;
+    display: flex;
+    flex-direction: column;
+
+    &-img {
+        img {
+            width: 100%;
+            object-fit: cover;
+            height: 100%;
+            border-top-left-radius: 13px;
+            border-top-right-radius: 13px;
+        }
+    }
+
+    &-texto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        padding: rem(24) rem(24) rem(64) rem(24);
+        background: $cor-branco;
+        border-bottom-left-radius: 13px;
+        border-bottom-right-radius: 13px;
+        @include d(m) {
+            padding: rem(24) rem(24) rem(32) rem(24);
+        }
+
+        h3 {
+            @include tituloReplicado($cor-primaria);
+            width: 100%;
+            &::after {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 1px;
+                background-color: #DEE2E6;
+                margin: 16px 0;
+            }
+            span {
+                visibility: hidden;
+            }
+        }
+
+        p {
+            @include textoReplicado($cor-preto-1);
+            padding-bottom: rem(16);
+          
+        }
+
+        .btn__conheca {
+            @include botao($cor-branco);
+            padding: rem(20) rem(40);
+            transition: background .3s ease-in;
+            &:hover,
+            &:focus {
+                background: $cor-roxo;
+            }
+        }
+    }
+}
+
+@mixin setas {
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        background: #956AA7;
+        padding: 1.675em;
+        border-radius: 50%;
+        top: 60%;
+
+
+        @include d(m) {
+            display: none;
+        }
+    }
+
+    .swiper-button-disabled {
+        background: #956aa7de;
+    }
+
+    .swiper-button-next {
+        right: -10px;
+    }
+
+    .swiper-button-prev {
+        left: -10px;
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        font-size: 1rem;
+        color: #fff;
+
+    }
+}
+
+
+
+
+@mixin comparador($before, $after) {
+    height: 348px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    @include d(s){
+        height: 324px;
+    }
+
+    .images {
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+
+    .img1 {
+        width: 100%;
+        height: 100%;
+        background-image: url($before);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    .img2 {
+        background-image: url($after);
+        background-repeat: no-repeat;
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        left: 0;
+        background-size: cover;
+
+    }
+
+    /* estilos do range*/
+    .range {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        padding: rem(24);
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(15px);
+        border-radius: 0px 0px 16px 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            color: $cor-branco;
+        }
+
+        input[type=range] {
+            /*removes default webkit styles*/
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            /*fix for FF unable to apply focus style bug */
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            /*required for proper track sizing in FF*/
+            width: 100%;
+            margin: 0 20px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+
+        }
+
+        input[type=range]::-webkit-slider-runnable-track {
+            height: 3px;
+            background: rgba(255, 255, 255, 0.4);
+            border: none;
+            border-radius: 3px;
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            border: 2px solid #FFFFFF;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            background: $cor-azul;
+            margin-top: -6px;
+            cursor: pointer;
+        }
+
+        input[type=range]::-moz-range-thumb {
+            -webkit-appearance: none;
+            border: 2px solid #FFFFFF;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            background: $cor-azul;
+            margin-top: -6px;
+            cursor: pointer;
+        }
+
+    }
+}
+
+
+@mixin navegacao {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .prev,
+    .next {
+        background: $cor-primaria;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        @include d(s) {
+            width: 50px;
+            height: 50px;
+        }
+
+        ion-icon {
+            font-size: rem(20);
+            color: $cor-branco;
+        }
+
+    }
+
+    .prev {
+        margin-right: 40px;
+    }
+}
+
+
+@mixin paginacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 380px;
+    margin: 0px auto 160px auto;
+
+    @include d(m) {
+        margin-bottom: 90px;
+    }
+
+    ion-icon {
+        color: $cor-primaria;
+        font-size: rem(16);
+    }
+
+    &__prev {
+        position: absolute;
+        left: 0;
+        border: 1px solid $cor-primaria;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 56px;
+        height: 56px;
+        border-radius: 4px;
+        background-color: $cor-background;
+    }
+
+    &__next {
+        position: absolute;
+        right: 0;
+        width: 56px;
+        height: 56px;
+        border-radius: 4px;
+        border: 1px solid $cor-primaria;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $cor-background;
+
+    }
+
+    .disabled {
+        border: 2px solid #CED4DA;
+
+        ion-icon {
+            color: #CED4DA;
+
+        }
+    }
+
+    &__numeracao {
+        display: flex;
+        align-items: center;
+
+        span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            font-weight: 600;
+            font-size: rem(18);
+            border: 1px solid $cor-primaria;
+            color: $cor-primaria;
+            background-color: $cor-background;
+            border-radius: 4px;
+            cursor: pointer;
+
+            &+span {
+                margin-left: 16px;
+            }
+
+        }
+
+        span.ativo {
+            background: $cor-primaria;
+            color: #fff;
+        }
+
+
+    }
+}
+
+
+@mixin dropdown {
+    span {
+        color: #000;
+        display: inline-flex;
+        align-items: center;
+        font-size: rem(16);
+        letter-spacing: 0.5px;
+        cursor: pointer;
+        transition: color .3s ease-in-out;
+        padding: rem(18) 0;
+
+
+        &:hover {
+            color: $cor-primaria;
+        }
+
+        ion-icon {
+            margin-left: 8px;
+            color: $cor-primaria;
+        }
+    }
+
+    & .menu__dropdown-submenu {
+        flex-direction: column;
+        position: absolute;
+        background-color: $cor-primaria;
+        padding: rem(24) rem(16) rem(24) rem(16);
+        width: max-content;
+        border-radius: 8px;
+        animation: sobeDrop .3s forwards;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 0px;
+            width: 0px;
+            top: -8px;
+            border-bottom: 10px solid $cor-primaria;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+        }
+
+        @keyframes sobeDrop {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 20px, 0);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0px, 0);
+            }
+        }
+
+        li {
+            margin-left: 0 !important;
+
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+
+            a {
+                font-size: rem(14);
+                font-weight: 500;
+                transition: color .3s ease-in-out;
+                color: $cor-branco;
+
+                &:hover {
+                    color: $cor-azul;
+                }
+            }
+        }
+    }
+
+
+
+
+}
+
+
+
+
+@mixin dropdownMobile {
+
+    /* DROPDOWN MOBILE*/
+    .menu__dropdown-mobile {
+        padding-bottom: 0;
+        overflow: hidden;
+
+        span {
+            display: inline-flex;
+            align-items: center;
+            font-weight: 600;
+            font-size: rem(32);
+            cursor: pointer;
+            transition: color .3s ease;
+            color: $cor-preto-1;
+
+            @include d(s) {
+                font-size: rem(22);
+            }
+
+            @include d(ss) {
+                font-size: rem(16);
+            }
+
+            ion-icon {
+                margin-left: 8px;
+                color: $cor-primaria;
+            }
+        }
+
+    }
+
+    .menu__dropdown-mobile-submenu {
+        display: none;
+        background: $cor-primaria;
+        flex-direction: column;
+        padding: rem(16) rem(16) 0 rem(16);
+        animation: dropMobile .3s forwards;
+        border-radius: 8px;
+
+        a {
+            font-size: rem(32);
+            font-weight: 500;
+            color: $cor-branco;
+            transition: .3s ease-in-out;
+            margin-left: 0 !important;
+            padding-bottom: rem(16);
+            z-index: -1;
+
+            &:hover {
+                color: $cor-azul !important;
+            }
+
+            @include d(m) {
+                font-size: rem(16);
+            }
+
+            @include d(ss) {
+                font-size: rem(14);
+            }
+
+        }
+    }
+
+    @keyframes dropMobile {
+        from {
+            transform: translate3d(-16px, 0px, 0);
+            opacity: 0;
+            max-height: 0;
+        }
+
+        to {
+            transform: translate3d(0, 0px, 0);
+            opacity: 1;
+            max-height: rem(260);
+        }
+    }
+
+    .parceiro {}
+
+    .menu__dropdown-mobile.ativo span {
+        color: $cor-primaria;
+    }
+
+    .menu__dropdown-mobile.ativo .menu__dropdown-mobile-submenu {
+        max-height: rem(260);
+        display: flex;
+
+        @include d(ss) {
+            max-height: rem(210);
+        }
+    }
+
+}

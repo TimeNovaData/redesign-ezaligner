@@ -1,0 +1,66 @@
+.hello-week {
+    border-radius: 12px;
+    padding: rem(24);
+    background: #F7F3F8;
+    @include d(s){
+        padding: rem(16);
+    }
+
+    .navigation {
+        display: flex;
+        align-items: center;
+        .period {
+            text-align: left;
+            font-size: rem(24);
+            color: #343A40;
+            font-weight: 700;
+            padding-left: 1rem;
+        }
+
+        .prev, .next {
+            display: flex;
+            align-items: center;
+            ion-icon{
+                font-size: rem(24);
+                color: $cor-preto-1;
+            }
+        }
+
+       
+    }
+
+    .week {
+        color: #956AA7;
+    }
+
+    .day {
+        border-radius: 50%;
+        padding: rem(14);
+        font-size: rem(16);
+        color: $cor-preto-1;
+        @include d(ss){
+            font-size: rem(14);
+           
+        }
+    }
+
+     .day.is-today{
+        background-color: #C6AECF!important;
+    }
+    
+
+    .day.is-selected {
+        background: #C6AECF !important;
+
+    }
+
+
+}
+
+
+
+
+
+
+
+

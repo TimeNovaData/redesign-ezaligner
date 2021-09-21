@@ -1,0 +1,58 @@
+//colocar  as variaveis de cor  do projeto no body como variaveis css
+body {
+    --cor-branco: #fff;
+    --cor-bg: #F8FAFC;
+    --cor-preto-1: #343A40;
+    --cor-preto-2: #495057;
+    --cor-primaria: #956AA7;
+    --cor-rosa: #A87AB1;
+    --cor-roxo: #704E7F;
+    --cor-roxo-2:  #9E87BB;
+    --cor-roxo-escuro: #4F4468;
+    --cor-azul: #CBEDEF;
+    --cor-cinza: #B8CCD8;
+    
+
+}
+
+body.dark__mode {
+    --cor-preto-1: white;
+
+    //reduz levemente o brilho
+    img {
+        filter: brightness(0.9);
+    }
+}
+
+//mas utilizar dentro do sass a sintaxe de variavel do sass que é menos verrrbosa
+
+//background de algumas páginas
+$cor-background:#{var(--cor-bg)};
+
+
+
+// preto
+$cor-preto-1:#{var(--cor-preto-1)};
+$cor-preto-2:#{var(--cor-preto-2)};
+//cor branco
+$cor-branco:#{var(--cor-branco)};
+
+//cor primaria
+$cor-primaria:#{var(--cor-primaria)};
+
+// cor roxo
+$cor-roxo:#{var(--cor-roxo)};
+$cor-roxo-2:#{var(--cor-roxo-2)};
+$cor-roxo-escuro:#{var(--cor-roxo-escuro)};
+
+//cor rosa
+$cor-rosa:#{var(--cor-rosa)};
+
+// cor azul
+$cor-azul:#{var(--cor-azul)};
+
+// cor cinza
+$cor-cinza:#{var(--cor-cinza)};
+
+
+

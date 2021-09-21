@@ -1,0 +1,307 @@
+.footer {
+    background-color: $cor-roxo-escuro;
+
+    &__wrapper {
+        padding: rem(72) 0 rem(56) 0;
+        display: flex;
+        justify-content: space-between;
+
+        @include d(m) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &-logo {
+            img {
+                max-width: 170px;
+            }
+
+            .redes {
+                display: none;
+                padding-top: rem(32);
+                justify-content: center;
+
+                @include d(m) {
+                    display: flex;
+                }
+
+                li {
+                    &+li {
+                        margin-left: 24px;
+                    }
+                }
+            }
+        }
+
+        &-menu {
+            display: flex;
+            justify-content: space-between;
+
+            @include d(m) {
+                margin-top: 56px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 32px;
+            }
+
+            &-tratamentos {
+                h2 {
+                    font-size: rem(20);
+                    font-weight: 600;
+                    line-height: 160%;
+                    color: $cor-azul;
+                    margin-bottom: 24px;
+
+                    @include d(s) {
+                        font-size: rem(16);
+                    }
+                }
+
+                li {
+                    &+li {
+                        margin-top: 16px;
+                    }
+
+                    a {
+                        display: block;
+                        font-size: rem(18);
+                        color: $cor-branco;
+                        transition: color .3s ease-in-out;
+
+                        &:hover {
+                            color: $cor-azul;
+                        }
+
+                        @include d(s) {
+                            font-size: rem(14);
+                        }
+                    }
+                }
+            }
+
+            &-informacoes {
+                h2 {
+                    font-size: rem(20);
+                    font-weight: 600;
+                    line-height: 160%;
+                    color: $cor-azul;
+                    margin-bottom: 24px;
+
+                    @include d(s) {
+                        font-size: rem(16);
+                    }
+                }
+
+                li {
+                    &+li {
+                        margin-top: 16px;
+                    }
+
+                    a {
+                        display: block;
+                        font-size: rem(18);
+                        color: $cor-branco;
+                        transition: color .3s ease-in-out;
+
+                        &:hover {
+                            color: $cor-azul;
+                        }
+
+                        @include d(s) {
+                            font-size: rem(14);
+                        }
+                    }
+                }
+            }
+
+            &-contato {
+                display: flex;
+                flex-direction: column;
+
+                @include d(m) {
+                    grid-column: span 3;
+                }
+
+                h2 {
+                    font-size: rem(20);
+                    font-weight: 600;
+                    line-height: 160%;
+                    color: $cor-azul;
+                    margin-bottom: 24px;
+
+                    @include d(s) {
+                        font-size: rem(16);
+                        margin-bottom: 16px;
+                    }
+                }
+
+                .mobile {
+                    @include d(m) {
+                        width: 100%;
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        justify-content: space-between;
+                    }
+                }
+
+                .horario {
+                    margin-bottom: 16px;
+
+                    h3 {
+                        color: $cor-branco;
+                        font-size: rem(18);
+                        line-height: 160%;
+                        font-weight: 600;
+
+                        @include d(s) {
+                            font-size: rem(14);
+                            max-width: 80px;
+                        }
+                    }
+
+                    p {
+                        color: $cor-branco;
+                        font-size: rem(18);
+                        line-height: 160%;
+
+                        @include d(s) {
+                            font-size: rem(14);
+                        }
+                    }
+                }
+
+                .telefone {
+                    margin-bottom: 16px;
+
+                    h3 {
+                        color: $cor-branco;
+                        font-size: rem(18);
+                        line-height: 160%;
+                        font-weight: 600;
+
+                        @include d(s) {
+                            font-size: rem(14);
+                        }
+                    }
+
+                    a {
+                        display: block;
+                        color: $cor-branco;
+                        font-size: rem(18);
+                        line-height: 160%;
+                        transition: color .3s ease-in-out;
+
+                        &:hover {
+                            color: $cor-azul;
+                        }
+
+                        @include d(s) {
+                            font-size: rem(14);
+                        }
+                    }
+                }
+
+                .whatsapp {
+                    margin-bottom: 16px;
+
+                    h3 {
+                        color: $cor-branco;
+                        font-size: rem(18);
+                        line-height: 160%;
+                        font-weight: 600;
+
+                        @include d(s) {
+                            font-size: rem(14);
+                        }
+                    }
+
+                    a {
+                        display: block;
+                        color: $cor-branco;
+                        font-size: rem(18);
+                        line-height: 160%;
+                        transition: color .3s ease-in-out;
+
+                        &:hover {
+                            color: $cor-azul;
+                        }
+
+                        @include d(s) {
+                            font-size: rem(14);
+                        }
+                    }
+                }
+
+                .email {
+                    h3 {
+                        color: $cor-branco;
+                        font-size: rem(18);
+                        line-height: 160%;
+                        font-weight: 600;
+
+                        @include d(s) {
+                            font-size: rem(14);
+                        }
+                    }
+
+                    a {
+                        display: block;
+                        color: $cor-branco;
+                        font-size: rem(18);
+                        line-height: 160%;
+                        transition: color .3s ease-in-out;
+
+                        &:hover {
+                            color: $cor-azul;
+                        }
+
+                        @include d(s) {
+                            font-size: rem(14);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__copy {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding-bottom: rem(16);
+
+        @include d(m) {
+            padding-bottom: rem(24);
+            flex-direction: column;
+        }
+
+        p {
+            color: $cor-branco;
+            font-size: rem(18);
+            text-align: center;
+
+            @include d(m) {
+                order: 2;
+
+            }
+
+            @include d(s) {
+                font-size: rem(12);
+
+            }
+        }
+
+        a {
+            position: absolute;
+            right: 0;
+
+            @include d(m) {
+                position: unset;
+                margin-bottom: 16px;
+
+            }
+        }
+
+    }
+}

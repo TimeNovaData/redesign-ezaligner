@@ -1,0 +1,371 @@
+.menu__desktop {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0px 2px 8px rgba(75, 51, 86, 0.08);
+    background-color: #fff;
+    z-index: 100;
+    @include d(m) {
+        display: none;
+    }
+
+    .logo {
+        transition: transform .3s ease;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+
+    }
+
+    &-atalhos {
+        display: flex;
+        align-items: center;
+
+        li {
+            &+li:not(:last-child) {
+                margin-left: rem(32);
+            }
+
+            a {
+                display: inline-flex;
+                color: $cor-preto-1;
+                text-decoration: none;
+                transition: color .3s ease-in-out;
+
+                &:hover {
+                    color: $cor-primaria;
+                }
+            }
+
+            span {
+                display: inline-flex;
+                color: $cor-preto-1;
+
+
+            }
+        }
+
+        &-midias {
+            margin-left: rem(40);
+            display: flex;
+            a {
+                display: inline-flex;
+                padding: rem(5);
+                img{
+                    transition: box-shadow .3s ease-in, transform .3s ease-in;
+                    &:hover, &:focus {
+                        box-shadow: 0 0.5em 0.5em -0.4em $cor-primaria;
+                        transform: translateY(-0.25em);
+                    }  
+                }
+            
+
+                &+a {
+                    margin-left: rem(17);
+                }
+            }
+        }
+    }
+
+    &-midias {
+        display: flex;
+    }
+
+    /* BOTÃO COM DROPDOWN*/
+    .btn__dropdown {
+        margin-left: rem(40);
+        position: relative;
+        span {
+            display: inline-flex;
+            background-color: $cor-primaria;
+            padding: rem(40) rem(52) !important;
+            transition: padding .3s ease-in-out !important;
+            text-decoration: none;
+            color: $cor-branco !important;
+            transition: padding .3s ease;
+            align-items: center;
+            cursor: pointer;
+
+            ion-icon {
+                color: $cor-azul !important;
+                margin-left: 16px;
+            }
+        }
+
+        &-submenu {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            background-color: $cor-primaria;
+            padding: rem(24) rem(18);
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            width: 100%;
+            right: 0;
+            animation: sobeDrop .3s forwards;
+
+            @keyframes sobeDrop {
+                from {
+                    opacity: 0;
+                    transform: translate3d(0, 20px, 0);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translate3d(0, 0px, 0);
+                }
+            }
+
+
+            li {
+                margin-left: 0 !important;
+
+                &:not(:last-child) {
+                    margin-bottom: 8px;
+                }
+
+                a {
+                    font-size: rem(14);
+                    font-weight: 500;
+                    transition: .3s ease-in-out;
+                    color: $cor-branco !important;
+                    text-align: center !important;
+                    transition: color .3s ease-in;
+
+
+                    &:hover {
+                        color: $cor-azul !important;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+.menu__desktop.scroll {
+    background: #fff;
+
+    box-shadow: rgb(99 99 99 / 10%) 0px 2px 8px 0px;
+}
+
+.menu__desktop.scroll .logo {
+    transform: scale(0.8);
+}
+
+
+
+.menu__desktop.scroll .btn__dropdown span {
+    padding: rem(32) !important;
+}
+
+.menu__desktop.scroll .btn__dropdown-submenu {}
+
+
+.menu__mobile {
+    display: none;
+
+    @include d(m) {
+        display: flex;
+        width: 100%;
+        position: fixed;
+        z-index: 1000;
+        padding: 24px 0;
+        background-color: $cor-branco;
+    }
+
+    &-logo {
+        max-width: 130px;
+
+
+
+    }
+
+    &-hamburger {
+        border-top: 2px solid $cor-primaria;
+        width: 32px;
+        display: block;
+        position: relative;
+        cursor: pointer;
+        z-index: 101;
+
+
+
+        &::after,
+        &::before {
+            content: "";
+            display: block;
+            background: $cor-primaria;
+            width: 32px;
+            height: 2px;
+            margin-top: 8px;
+            position: relative;
+            transition: transform .2s ease;
+            will-change: transform;
+            border-radius: 8px;
+
+
+        }
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        background: rgba(255,255,255, 0.8);
+        backdrop-filter: blur(5px);
+        top: 97px;
+        right: 0;
+        width: 100%;
+        overflow: hidden;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 100;
+        will-change: transform;
+        transition: transform .3s ease-in-out, opacity .3s ease-in-out, box-shadow .3s ease-in-out;
+
+        &-atalhos {
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+            height: 100vh;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 16px 24px;
+            transform: translateX(110vw);
+            transition-property: transform;
+            transition: .3s ease-in-out;
+            @include d(s){
+                width: 80%;
+            }
+
+            li {
+                margin-top: 32px;
+                margin-left: 16px;
+                margin-right: 32px;
+
+                &+li {
+                    margin-top: 16px;
+                }
+
+                a {
+                    font-size: rem(32);
+                    font-weight: 600;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    transition: color .3s ease;
+                    color: $cor-preto-1;
+                    @include d(s){
+                        font-size: rem(22);
+                    }
+                    @include d(ss) {
+                        font-size: rem(16);
+                    }
+
+                    &:hover:not(.btn__orcamento) {
+                        color: $cor-primaria;
+                    }
+
+                    ion-icon {
+                        color: $cor-primaria;
+                    }
+                }
+            }
+
+            .midias {
+                display: flex;
+                align-items: center;
+                padding-top: rem(16);
+
+                a {
+                    img {
+                        @include d(m){
+                            width: 50px;
+                            width: 50px;
+                        }
+                        @include d(s){
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+
+            #orna__menu {
+                position: absolute;
+                transform: translateX(150px);
+                bottom: -32px;
+            }
+
+            
+        }
+    }
+
+    @include dropdownMobile;
+
+}
+
+
+
+.menu__mobile.scroll {
+
+    box-shadow: 0px 2px 8px rgba(75, 51, 86, 0.08);
+}
+
+.menu__mobile.ativa .menu__mobile__nav {
+    visibility: visible;
+    opacity: 1;
+
+}
+
+
+.menu__mobile.ativa .menu__mobile__nav-atalhos {
+    transform: translateX(0);
+}
+
+.menu__mobile.ativa .menu__mobile-hamburger {
+    border-top: transparent;
+}
+
+.menu__mobile.ativa .menu__mobile-hamburger::after {
+    transform: rotate(135deg);
+    top: -10px;
+}
+
+.menu__mobile.ativa .menu__mobile-hamburger::before {
+    transform: rotate(-135deg);
+
+}
+
+
+
+
+/* ativação dropdown*/
+
+
+[data-dropdown] {
+    @include dropdown;
+
+    & .menu__dropdown-submenu {
+        display: none;
+    }
+}
+
+[data-dropdown].ativo:hover span {
+    color: $cor-primaria;
+}
+
+[data-dropdown].ativo.menu__dropdown-submenu,
+[data-dropdown]:hover .menu__dropdown-submenu {
+    display: flex;
+}
+
+[data-dropdown].ativo.btn__dropdown-submenu,
+[data-dropdown].btn__dropdown:hover .btn__dropdown-submenu {
+    display: flex;
+
+}
