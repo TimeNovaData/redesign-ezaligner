@@ -1,0 +1,76 @@
+.duvidas {
+    h1 {
+        @include tituloSecoes($cor-primaria);
+        text-align: center;
+    }
+    &__accordion {
+        padding-top: rem(64);
+
+        &-item {
+            border: 1px solid $cor-primaria;
+            padding: rem(24);
+            border-radius: 8px;
+            background-color: $cor-branco;
+            cursor: pointer;
+
+            @include d(m) {
+                padding: rem(24) rem(16);
+            }
+
+            &+.duvidas__accordion-item {
+                margin-top: 16px;
+            }
+
+            .pergunta {
+                position: relative;
+                display: flex;
+                align-items: center;
+
+                &::after {
+                    content: attr(data-content);
+                    display: inline-block;
+                    position: absolute;
+                    top: -8px;
+                    right: 0;
+                    height: 1;
+                    font-size: 22px;
+                    color: $cor-primaria;
+                    @include d(s) {
+                        font-size: 18px;
+
+                    }
+
+                }
+
+                h3 {
+                    font-size: rem(16);
+                    font-weight: 500;
+                    color: $cor-primaria;
+                    margin-bottom: 0;
+
+                    @include d(m) {
+                        font-size: rem(14);
+                    }
+                }
+            }
+
+            .resposta {
+                overflow: hidden;
+                max-height: 0;
+                transition: max-height .3s ease-in-out;
+
+                p {
+                    font-size: rem(14);
+                    color: $cor-preto-2;
+                    line-height: 160%;
+                    padding-top: rem(8);
+                }
+            }
+
+            .resposta.ativar {
+                max-height: 300px;
+            }
+        }
+    }
+
+}

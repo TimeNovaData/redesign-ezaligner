@@ -16,6 +16,7 @@ import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
 import comparador from './modules/comparador.js';
 import menus from './modules/menu-bruno.js';
 import menuDropdown from './modules/dropdown.js';
+import initAccordion from './modules/accordion.js';
 //import modalFormulario from './modules/modal-formulario.js';
 //import modalTermos from './modules/modal.js';
 
@@ -45,6 +46,7 @@ if (pageAlinhador) { // ★ HOME
     //menus();
     menuDropdown();
     comparador();
+    initAccordion();
 }
 
 

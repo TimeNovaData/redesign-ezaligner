@@ -1,48 +1,24 @@
-export default
+export default function initAccordion() {
+    const accordionPergunta = document.querySelectorAll('.duvidas__accordion-item');
 
-function initAccordion() {
+    const ativar = 'ativar';
 
-    const accordionList = document.querySelectorAll('[data-accordion] dt');
-    const activeClass = 'ativo';
+    if (accordionPergunta.length) {
 
-    if (accordionList.length) {
-
-        function activeAccordion() {
-            this.classList.toggle(activeClass);
-            this.nextElementSibling.classList.toggle(activeClass);
-
-            let filho = this.nextElementSibling
-            console.log(filho);
-            let height = filho.querySelector(".content").offsetHeight
-            console.log(height);
-            const timeline = gsap.timeline({
-                paused: true,
-            })
-
-            timeline
-                .to((filho), .1, {
-                    ease: "linear",
-                    maxHeight: height,
-                    "clip-path": "inset(0 0 0 0)"
-                })
-
-            if (this.classList.contains(activeClass)) {
-                timeline.play()
-            } else {
-                gsap.to((filho), .1, {
-                    ease: "linear",
-                    maxHeight: 0,
-                    "clip-path": "inset(0 0 100% 0)"
-
-                })
-
-
-                timeline.kill()
-            }
+        function activeAccordion(event) {
+            this.querySelector('.resposta').classList.toggle(ativar);
+            const trocarIcone = this.querySelector('.pergunta').dataset.content;
+            this.querySelector('.pergunta').dataset.content = trocarIcone == "+" ? "-" : "+";
         }
 
-        accordionList.forEach((item) => {
+        
+        accordionPergunta.forEach((item, index) => {
             item.addEventListener('click', activeAccordion);
-        });
+        })
+
+     
+
+      
     }
+
 }

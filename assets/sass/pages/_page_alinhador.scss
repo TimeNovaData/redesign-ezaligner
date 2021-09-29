@@ -2,6 +2,8 @@
 @import "../components/secao_produtos";
 @import "../components/secao_parceiros";
 @import "../components/secao_busca";
+@import "../components/secao_duvidas";
+
 
 
 
@@ -130,7 +132,7 @@
             height: 345px;
 
             @include d(s) {
-                @include comparador("../img/page-alinhador/alinhamento-a-pc.jpg", "../img/page-alinhador/alinhamento-b-pc.jpg");
+                @include comparador("../img/page-alinhador/alinhamento-a-mobile.jpg", "../img/page-alinhador/alinhamento-b-mobile.jpg");
                 width: 100%;
                 max-width: 350px;
                 height: 324px;
@@ -213,57 +215,9 @@
     background-color: $cor-background-2;
     padding: rem(80) 0;
     margin-bottom: 160px;
-    @include d(m){
+
+    @include d(m) {
         margin-bottom: 90px;
     }
 }
 
-.duvidas {
-    h1{
-        @include tituloSecoes($cor-primaria);
-        text-align: center;
-    }
-    &__accordion{
-        padding-top: rem(64);
-        &-item{
-            border: 1px solid $cor-primaria;
-            padding: rem(24);
-            border-radius: 8px;
-            background-color: $cor-branco;
-            & + .duvidas__accordion-item{
-                margin-top: 16px;
-            }
-            .pergunta{
-                position: relative;
-                display: flex;
-                align-items: center;
-                &::after{
-                    content: "+";
-                    display: inline-block;
-                    position: absolute;
-                    top: -8px;
-                    right: 0;
-                    height: 1;
-                    font-size: 22px;
-                    color: $cor-primaria;
-
-                }
-                h3{
-                    font-size: rem(16);
-                    font-weight: 500;
-                    color: $cor-primaria;
-                }
-            }
-
-            .resposta{
-                p{
-                    font-size: rem(14);
-                    color: $cor-preto-2;
-                    line-height: 160%;
-                }
-            }
-         
-        }
-    }
-
-}
