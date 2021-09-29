@@ -1,0 +1,62 @@
+.passo{
+    background-color: #F5FBFC;
+    padding: rem(80) 0;
+    margin-bottom: 160px;
+    @include d(m){
+        margin-bottom: 90px;
+        padding: rem(48) 0;
+    }
+    h1{
+        @include tituloSecoes($cor-primaria);
+        text-align: center;
+    }
+    &__wrapper{
+        padding-top: rem(64);
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        @include d(m){
+            flex-direction: column;
+            padding-top: rem(32);
+        }
+        &-item{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            max-width: 350px;
+            margin: 0 auto;
+            & + .passo__wrapper-item{
+                @include d(m){
+                    margin-top: 32px;
+                }
+            }
+            &-img{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                span{
+                    color: #A4C6C9;
+                    font-size: rem(24);
+                    font-weight: 800;
+                    display: block;
+                    padding-bottom: rem(16);
+                }
+            }
+            &-info{
+                margin-top: 32px;
+                h3{
+                   font-size: rem(18);
+                   font-weight: 600;
+                   color: $cor-primaria; 
+                   line-height: 160%;
+                }
+                p{
+                    font-size: rem(16);
+                    color: $cor-preto-2;
+                    line-height: 160%;
+                }
+            }
+        }
+    }
+}

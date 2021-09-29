@@ -1,15 +1,19 @@
 //colocar  as variaveis de cor  do projeto no body como variaveis css
 body {
     --cor-branco: #fff;
+    --cor-branco-2: #F8F9FA;
     --cor-bg: #F8FAFC;
+    --cor-bg-2: #F1F3F5;
     --cor-preto-1: #343A40;
     --cor-preto-2: #495057;
+    --cor-preto-3: #212529;
     --cor-primaria: #956AA7;
     --cor-rosa: #A87AB1;
     --cor-roxo: #704E7F;
     --cor-roxo-2:  #9E87BB;
     --cor-roxo-escuro: #4F4468;
     --cor-azul: #CBEDEF;
+    --cor-azul-background: #EEFDFA;
     --cor-cinza: #B8CCD8;
     
 
@@ -28,14 +32,18 @@ body.dark__mode {
 
 //background de algumas páginas
 $cor-background:#{var(--cor-bg)};
+$cor-background-2:#{var(--cor-bg-2)};
+$cor-azul-background: #{var(--cor-azul-background)};
 
 
 
 // preto
 $cor-preto-1:#{var(--cor-preto-1)};
 $cor-preto-2:#{var(--cor-preto-2)};
+$cor-preto-3:#{var(--cor-preto-3)};
 //cor branco
 $cor-branco:#{var(--cor-branco)};
+$cor-branco-2:#{var(--cor-branco-2)};
 
 //cor primaria
 $cor-primaria:#{var(--cor-primaria)};

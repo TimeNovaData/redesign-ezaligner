@@ -1,0 +1,129 @@
+@import "../components/secao_produtos";
+@import "../components/secao_parceiros";
+@import "../components/secao_busca";
+
+.introducao {
+    margin-top: 140px;
+    margin-bottom: 160px;
+    position: relative;
+
+    @include d(m) {
+        margin-top: 98px;
+        margin-bottom: 90px;
+    }
+
+
+
+    .container {
+        @include d(s) {
+            padding: 0;
+            height: 100%;
+        }
+    }
+
+    &__wrapper {
+        background: $cor-azul-background;
+        background-image: url("../img/page-home/banner.png");
+        background-repeat: no-repeat;
+        background-position-x: right;
+        padding: 110px;
+
+        @include d(s) {
+            background-image: url('');
+            padding: 0;
+            height: 100%;
+        }
+
+        &-texto {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @include d(s) {
+                padding: 200px 0 64px 0;
+                background-image: url("../img/page-home/banner-mobile.png");
+                background-position-x: center;
+                background-repeat: no-repeat;
+                width: 100%;
+                align-items: center;
+                height: 50%;
+            }
+
+
+            h1 {
+                font-size: rem(48);
+                font-weight: 900;
+                line-height: 140%;
+
+                @include d(s) {
+                    font-weight: 700;
+                    color: $cor-branco;
+                    text-align: center;
+                    font-size: rem(48);
+                }
+            }
+
+            p {
+                padding-top: rem(16);
+                font-size: rem(16);
+                font-weight: 400;
+                color: #5A7378;
+
+                @include d(s) {
+                    color: $cor-branco;
+                    text-align: center;
+                    max-width: 290px;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        &-botoes {
+            padding-top: rem(64);
+
+            @include d(s) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: rem(64) 0;
+            }
+
+            .btn__teste-sorriso {
+                @include botao($cor-branco);
+                padding: rem(24) rem(64);
+                border-radius: 8px;
+            }
+
+            .btn__duvidas {
+                margin-left: rem(56);
+                display: inline-flex;
+                align-items: center;
+                font-size: rem(16);
+                transition: color .3s ease-in;
+                color: $cor-preto-3;
+
+                &:hover {
+                    color: $cor-primaria;
+                }
+
+                @include d(s) {
+                    margin-left: 0;
+                    margin-top: 32px;
+                }
+
+
+
+                ion-icon {
+                    padding-left: rem(8);
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
+
+

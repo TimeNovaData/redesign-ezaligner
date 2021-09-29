@@ -269,146 +269,32 @@
 
 
 @mixin tituloSecoes($cor-texto) {
-    font-size: rem(64);
-    line-height: 110%;
+    font-size: rem(48);
+    line-height: 140%;
     color: $cor-texto;
-    font-weight: 900;
-    text-align: center;
-    font-style: italic;
-
+    font-weight: 800;
+    letter-spacing: -2%;
     @include d(m) {
         font-size: rem(32);
     }
 }
 
 
-@mixin afterTexto($cor) {
-    content: "";
-    display: block;
-    margin: 40px auto 0 auto;
-    background: $cor;
-    width: 80px;
-    height: 8px;
-    border-radius: 4px;
 
-    @include d(m) {
-        margin-top: 24px;
-    }
-}
-
-@mixin beforeTexto($cor) {
-    content: "";
-    display: block;
-    margin: 40px auto 0 auto;
-    background: $cor;
-    width: 80px;
-    height: 8px;
-    border-radius: 4px;
-
-    @include d(m) {
-        margin-top: 24px;
-    }
-}
 
 @mixin botao($cor-texto) {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     color: $cor-texto;
-    font-weight: 600;
+    font-weight: 500;
     background: $cor-primaria;
     border-radius: 36px;
     position: relative;
 
 }
 
-@mixin tituloReplicado($cor) {
-    font-size: rem(24);
-    font-weight: 600;
-    line-height: 160%;
-    color: $cor;
-    text-align: center;
 
-    @include d(m) {
-        font-size: rem(18);
-    }
-}
-
-@mixin textoReplicado($cor) {
-    line-height: 180%;
-    font-weight: 400;
-    font-size: rem(16);
-    color: $cor;
-    text-align: center;
-
-    @include d(m) {
-        font-size: rem(16);
-    }
-}
-
-@mixin cardReplicado {
-    box-shadow: 0px 16px 24px rgba(149, 106, 167, 0.12);
-    border-radius: 13px;
-    display: flex;
-    flex-direction: column;
-
-    &-img {
-        img {
-            width: 100%;
-            object-fit: cover;
-            height: 100%;
-            border-top-left-radius: 13px;
-            border-top-right-radius: 13px;
-        }
-    }
-
-    &-texto {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        height: 100%;
-        padding: rem(24) rem(24) rem(64) rem(24);
-        background: $cor-branco;
-        border-bottom-left-radius: 13px;
-        border-bottom-right-radius: 13px;
-        @include d(m) {
-            padding: rem(24) rem(24) rem(32) rem(24);
-        }
-
-        h3 {
-            @include tituloReplicado($cor-primaria);
-            width: 100%;
-            &::after {
-                content: "";
-                display: block;
-                width: 100%;
-                height: 1px;
-                background-color: #DEE2E6;
-                margin: 16px 0;
-            }
-            span {
-                visibility: hidden;
-            }
-        }
-
-        p {
-            @include textoReplicado($cor-preto-1);
-            padding-bottom: rem(16);
-          
-        }
-
-        .btn__conheca {
-            @include botao($cor-branco);
-            padding: rem(20) rem(40);
-            transition: background .3s ease-in;
-            &:hover,
-            &:focus {
-                background: $cor-roxo;
-            }
-        }
-    }
-}
 
 @mixin setas {
 
@@ -458,6 +344,8 @@
     @include d(s){
         height: 324px;
     }
+
+
 
     .images {
         width: 100%;

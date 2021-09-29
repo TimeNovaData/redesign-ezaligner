@@ -1,0 +1,119 @@
+.parceiros {
+    position: relative;
+    margin-bottom: 200px;
+
+    &__titulo {
+        h1 {
+            @include tituloSecoes($cor-primaria);
+        }
+
+        padding-bottom: rem(32);
+    }
+
+    .fundo {
+        background-color: $cor-background-2;
+        position: absolute;
+        width: 100%;
+        height: 90%;
+        left: 0;
+        z-index: -1;
+
+        @include d(m) {
+            height: 98%;
+        }
+    }
+
+    &__wrapper {
+        align-items: stretch;
+        padding: rem(64) 0 0 0;
+
+        .swiper-slide {
+            height: auto;
+        }
+
+        &-item {
+            background-color: $cor-branco;
+            border: 1px solid $cor-azul;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+
+
+            &-img {
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 1px;
+                    background-color: $cor-azul;
+                }
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    border-top-left-radius: 16px;
+                    border-top-right-radius: 16px;
+                }
+            }
+
+            &-info {
+                padding: rem(24);
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                &-texto {
+                    &:not(:last-child) {
+                        margin-bottom: 24px;
+                    }
+
+                    span {
+                        color: $cor-primaria;
+                        font-size: rem(14);
+                        padding-bottom: rem(8);
+                        line-height: 160%;
+
+                    }
+
+                    p {
+                        color: $cor-preto-2;
+                        font-weight: 600;
+                        font-size: rem(16);
+                        line-height: 160%;
+                    }
+                }
+
+                .contato {
+                    display: flex;
+                    align-items: center;
+
+                    a {
+                        display: block;
+                        background: rgba(149, 106, 167, 0.1);
+                        padding: rem(12);
+                        border-radius: 11px;
+
+                        &+a {
+                            margin-left: 40px;
+                        }
+                    }
+                }
+            }
+
+            .btn__conheca {
+                background-color: $cor-azul;
+                display: inline-flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                padding: rem(24);
+                color: $cor-roxo-escuro;
+                font-size: rem(16);
+                font-weight: 600;
+                border-bottom-left-radius: 16px;
+                border-bottom-right-radius: 16px;
+            }
+        }
+    }
+}

@@ -12,7 +12,6 @@
 @import "../sass/components/body"; //BODY
 @import "../sass/components/menu";
 @import "../sass/components/footer";
-@import "../sass/components/secao_replicada";
 @import "../sass/components/modal";
 
 // PÁGINAS
@@ -21,52 +20,10 @@ main {
 }
 
 .body__home {
-    @import "./pages/page_home";
+    @import "../sass/pages/page_home";
 }
 
-.body__dentista {
-    @import "./pages/page_dentista";
+.body__alinhador{
+    @import "../sass/pages/page_alinhador";
 }
-
-.body__sobre {
-    @import "./pages/page_sobre";
-}
-
-.body__suporte {
-    @import "./pages/page_suporte";
-}
-
-.body__tecnologias {
-    @import "./pages/page_tecnologias";
-}
-
-
-.body__clareamento {
-    @import "./pages/page_clareamento";
-}
-
-.body__lentes {
-    @import "./pages/page_lentes";
-}
-
-.body__alinhadores {
-    @import "./pages/page_alinhadores";
-}
-
-.body__placas {
-    @import "./pages/page_placas";
-}
-
-.body__agenda {
-    @import "./pages/page_agenda";
-}
-
-.body__clinica {
-    @import "./pages/page_clinica";
-}
-
-.body__pesquisar {
-    @import "./pages/page_pesquisar";
-}
-
 

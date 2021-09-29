@@ -1,0 +1,174 @@
+/* pesquisa footer*/
+
+.busca {
+    position: relative;
+
+    .busca__avancada {
+        margin-bottom: -160px;
+        overflow: overlay;
+
+        @include d(s) {
+            margin-bottom: 0;
+            overflow: auto;
+        }
+
+        .container {
+            @include d(m) {
+                padding: 0;
+            }
+        }
+
+        h1 {
+            color: $cor-branco;
+            text-align: center;
+            font-weight: 800;
+            padding-bottom: rem(48);
+            font-size: rem(48);
+
+            @include d(m) {
+                padding-bottom: rem(32);
+                font-size: rem(32);
+            }
+        }
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            background-color: $cor-roxo-escuro;
+            padding: rem(64) 0;
+            border-radius: 16px;
+
+            @include d(m) {
+                padding: rem(48) rem(24);
+                flex-direction: column;
+
+            }
+
+            @include d(s) {
+                border-radius: 0;
+                padding: rem(48) rem(24);
+            }
+
+
+            &-campos {
+                display: flex;
+
+                @include d(m) {
+                    flex-direction: column;
+                }
+
+                .input__select {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+
+                    label {
+                        color: $cor-branco;
+                        padding-bottom: rem(8);
+                        font-size: rem(16);
+                        font-weight: 500;
+                    }
+
+                    select {
+                        padding: 18px;
+                        border-radius: 4px;
+                        color: $cor-primaria;
+                        font-weight: 500;
+                        width: 100%;
+                    }
+
+                    &+.input__select {
+                        margin-left: 24px;
+
+                        @include d(m) {
+                            margin-left: 0;
+                            margin-top: 24px;
+                        }
+                    }
+
+                }
+
+                .input__box {
+                    margin-left: 24px;
+                    width: 100%;
+
+                    @include d(m) {
+                        margin-left: 0;
+                        margin-top: 24px;
+                    }
+
+                    label {
+                        color: $cor-branco;
+                        padding-bottom: rem(8);
+                        font-size: rem(16);
+                        font-weight: 500;
+                    }
+
+                    input {
+                        padding: 18px;
+                        border-radius: 4px;
+                        color: $cor-primaria;
+                        font-weight: 500;
+                        width: 100%;
+                        outline: none;
+                        border: none;
+
+                        &::placeholder {
+                            color: $cor-primaria;
+                        }
+                    }
+
+
+                }
+
+                .btn__pesquisar {
+                    @include botao($cor-branco);
+                    padding: 20px 64px;
+                    border-radius: 4px;
+                    margin-left: 24px;
+                    align-self: flex-end;
+                    box-shadow: 0px 16px 32px -12px #7D598F;
+
+                    @include d(m) {
+                        margin-top: 24px;
+                        margin-left: 0;
+                        align-self: center;
+                        width: 100%;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .busca__mapa {
+        background: rgba(79, 68, 104, 0.5) url("../img/mapa__busca.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: rem(648);
+
+        @include d(s) {
+            height: rem(300);
+        }
+
+        .container-fluid {
+            height: 100%;
+        }
+
+        &-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+
+            .btn__mapa {
+                @include botao($cor-branco);
+                border-radius: 4px;
+                padding: rem(18) rem(47);
+                max-width: 200px;
+                font-weight: 500;
+            }
+        }
+
+    }
+}
