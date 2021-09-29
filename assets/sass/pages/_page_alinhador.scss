@@ -45,9 +45,11 @@
             flex-direction: column;
             justify-content: center;
             height: 100%;
-            @include d(s){
+
+            @include d(s) {
                 justify-content: flex-end;
             }
+
             h1 {
                 font-size: rem(48);
                 font-weight: 900;
@@ -58,7 +60,7 @@
                     font-weight: 700;
                     text-align: center;
                     font-size: rem(32);
-                    
+
                 }
             }
 
@@ -75,21 +77,24 @@
                     margin: 0 auto;
                 }
             }
+
             &-botoes {
                 padding-top: rem(40);
+
                 @include d(s) {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     padding: 0 0 rem(64) 0;
                 }
-    
+
                 .btn__teste-sorriso {
                     @include botao($cor-roxo-escuro);
                     padding: rem(24) rem(64);
                     border-radius: 8px;
                     background: $cor-azul;
-                    @include d(s){
+
+                    @include d(s) {
                         margin-top: 32px;
                     }
                 }
@@ -100,3 +105,99 @@
 
 
 
+
+.possibilidades {
+    margin-bottom: 160px;
+
+    @include d(m) {
+        margin-bottom: 90px;
+    }
+
+    h1 {
+        @include tituloSecoes($cor-primaria);
+        text-align: center;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        padding-top: rem(64);
+
+        .comparador {
+            @include comparador("../img/page-alinhador/alinhamento-a-pc.jpg", "../img/page-alinhador/alinhamento-b-pc.jpg");
+            width: 100%;
+            max-width: 400px;
+            height: 345px;
+
+            @include d(s) {
+                @include comparador("../img/page-alinhador/alinhamento-a-pc.jpg", "../img/page-alinhador/alinhamento-b-pc.jpg");
+                width: 100%;
+                max-width: 350px;
+                height: 324px;
+            }
+        }
+    }
+}
+
+
+.banner__inferior {
+    margin-bottom: 300px;
+    @include d(m){
+        display: none;
+    }
+    &-wrapper{
+        background-image: url("../img/page-alinhador/banner-rapaz.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: rem(550);
+        border-radius: 16px;
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        &-box{
+            background-color: $cor-roxo-escuro;
+            max-width: 600px;
+            position: absolute;
+            bottom: -150px;
+            right: 90px;
+            padding: rem(32);
+            border-radius: 16px;
+            h3{
+                font-size: rem(24);
+                font-weight: 600;
+                line-height: 140%;
+                text-align: center;
+                color: $cor-azul;
+            }
+            &-lista{
+                padding-top: rem(32);
+                display: flex;
+                flex-direction: column;
+                li{
+                    display: flex;
+                    align-items: flex-start;
+                    & + li {
+                        margin-top: 16px;
+                    }
+                    p{
+                        color: $cor-branco;
+                        margin-left: 8px;
+                        line-height: 160%;
+                        font-size: rem(16);
+                    }
+                }
+            }
+            .btn__encontre{
+                @include botao($cor-roxo-escuro);
+                width: 100%;
+                padding: rem(20) rem(64);
+                border-radius: 4px;
+                background-color: $cor-azul;
+                margin-top: 24px;
+            }
+        }
+    }
+ 
+
+}
