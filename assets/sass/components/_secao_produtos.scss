@@ -16,9 +16,10 @@
 
     &__wrapper {
         padding: rem(64) 0;
-
+        justify-content: center;
         @include d(m) {
             padding: rem(24) 0 rem(48) 0;
+            justify-content: unset;
         }
 
         .swiper-slide {
@@ -28,11 +29,18 @@
         &-item {
             box-shadow: 0px 16px 32px rgba(229, 222, 241, 0.5);
             border-radius: 16px;
+            background-color: $cor-branco;
+            max-width: 350px;
+            @include d(m){
+                max-width: auto;
+            }
 
             &-img {
                 img {
                     border-top-left-radius: 16px;
                     border-top-right-radius: 16px;
+                    object-fit: cover;
+                    width: 100%;
                 }
 
             }
@@ -66,7 +74,6 @@
                     padding: rem(20) rem(40);
                 }
             }
-
         }
     }
 

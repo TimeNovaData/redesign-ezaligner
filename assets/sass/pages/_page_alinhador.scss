@@ -142,10 +142,12 @@
 
 .banner__inferior {
     margin-bottom: 300px;
-    @include d(m){
+
+    @include d(m) {
         display: none;
     }
-    &-wrapper{
+
+    &-wrapper {
         background-image: url("../img/page-alinhador/banner-rapaz.png");
         background-repeat: no-repeat;
         background-size: cover;
@@ -155,7 +157,8 @@
         display: flex;
         align-items: flex-start;
         justify-content: flex-end;
-        &-box{
+
+        &-box {
             background-color: $cor-roxo-escuro;
             max-width: 600px;
             position: absolute;
@@ -163,24 +166,29 @@
             right: 90px;
             padding: rem(32);
             border-radius: 16px;
-            h3{
+
+            h3 {
                 font-size: rem(24);
                 font-weight: 600;
                 line-height: 140%;
                 text-align: center;
                 color: $cor-azul;
             }
-            &-lista{
+
+            &-lista {
                 padding-top: rem(32);
                 display: flex;
                 flex-direction: column;
-                li{
+
+                li {
                     display: flex;
                     align-items: flex-start;
-                    & + li {
+
+                    &+li {
                         margin-top: 16px;
                     }
-                    p{
+
+                    p {
                         color: $cor-branco;
                         margin-left: 8px;
                         line-height: 160%;
@@ -188,7 +196,8 @@
                     }
                 }
             }
-            .btn__encontre{
+
+            .btn__encontre {
                 @include botao($cor-roxo-escuro);
                 width: 100%;
                 padding: rem(20) rem(64);
@@ -198,6 +207,63 @@
             }
         }
     }
- 
+}
+
+.secao__diferenciada {
+    background-color: $cor-background-2;
+    padding: rem(80) 0;
+    margin-bottom: 160px;
+    @include d(m){
+        margin-bottom: 90px;
+    }
+}
+
+.duvidas {
+    h1{
+        @include tituloSecoes($cor-primaria);
+        text-align: center;
+    }
+    &__accordion{
+        padding-top: rem(64);
+        &-item{
+            border: 1px solid $cor-primaria;
+            padding: rem(24);
+            border-radius: 8px;
+            background-color: $cor-branco;
+            & + .duvidas__accordion-item{
+                margin-top: 16px;
+            }
+            .pergunta{
+                position: relative;
+                display: flex;
+                align-items: center;
+                &::after{
+                    content: "+";
+                    display: inline-block;
+                    position: absolute;
+                    top: -8px;
+                    right: 0;
+                    height: 1;
+                    font-size: 22px;
+                    color: $cor-primaria;
+
+                }
+                h3{
+                    font-size: rem(16);
+                    font-weight: 500;
+                    color: $cor-primaria;
+                }
+            }
+
+            .resposta{
+                p{
+                    font-size: rem(14);
+                    color: $cor-preto-2;
+                    line-height: 160%;
+                }
+            }
+         
+        }
+    }
 
 }

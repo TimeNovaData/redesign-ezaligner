@@ -40,7 +40,7 @@ if (pageHome) { // ★ HOME
 
 if (pageAlinhador) { // ★ HOME  
     new Dom().bodyClass("body__alinhador");
-    const swiperProdutos = new Swiper(".swiper-produtos", config.propsProdutos);
+    const swiperProdutos = new Swiper(".swiper-produtos", config.propsProdutos2);
     const swiperParceiros = new Swiper(".swiper-parceiros", config.propsParceiros);
     //menus();
     menuDropdown();
