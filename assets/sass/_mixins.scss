@@ -274,6 +274,7 @@
     color: $cor-texto;
     font-weight: 800;
     letter-spacing: -2%;
+
     @include d(m) {
         font-size: rem(32);
     }
@@ -298,38 +299,31 @@
 
 @mixin setas {
 
-    .swiper-button-next,
-    .swiper-button-prev {
-        background: #956AA7;
-        padding: 1.675em;
+    .prev,
+    .next {
+        background: $cor-primaria;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 64px;
+        width: 64px;
         border-radius: 50%;
-        top: 60%;
 
-
-        @include d(m) {
-            display: none;
+        ion-icon {
+            color: $cor-branco;
+            font-size: rem(18);
         }
     }
 
+    .next {
+        margin-left: 32px;
+    }
+
     .swiper-button-disabled {
-        background: #956aa7de;
-    }
-
-    .swiper-button-next {
-        right: -10px;
-    }
-
-    .swiper-button-prev {
-        left: -10px;
-    }
-
-    .swiper-button-next::after,
-    .swiper-button-prev::after {
-        font-size: 1rem;
-        color: #fff;
-
+        background: #D0C0DA;
     }
 }
+
 
 
 
@@ -341,7 +335,8 @@
     border-radius: 16px;
     display: flex;
     justify-content: center;
-    @include d(s){
+
+    @include d(s) {
         height: 324px;
     }
 

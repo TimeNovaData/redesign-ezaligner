@@ -92,6 +92,8 @@ const propsParceiros = {
 
 
 
+
+
 export
 const propsDepoimentos = {
     slidesPerView: 'auto',
@@ -299,6 +301,49 @@ const propsProdutos2 = {
         },
         1280: {
             slidesPerView: 3,
+            centeredSlides: false,
+            spaceBetween: 32,
+            
+        },
+
+    }
+}
+
+
+export
+const propsClinicas = {
+    slidesPerView: 'auto',
+    spaceBetween: 30,
+    // centeredSlides: true,
+
+/*     autoplay: {
+        delay: 1200,
+        disableOnInteraction: true,
+    },
+ */
+
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.next',
+        prevEl: '.prev',
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1.1,
+            centeredSlides: false,
+            spaceBetween: 16,
+        },
+
+        721: {
+            slidesPerView: 2.2,
+            centeredSlides: false,
+            spaceBetween: 16,
+        },
+        1280: {
+            slidesPerView: 4,
             centeredSlides: false,
             spaceBetween: 32,
             

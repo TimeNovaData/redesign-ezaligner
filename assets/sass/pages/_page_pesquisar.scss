@@ -177,22 +177,5 @@
 .navigation {
     display: flex;
     align-items: center;
-    .prev,
-    .next {
-        background: $cor-primaria;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        height: 64px;
-        width: 64px;
-        border-radius: 50%;
-        ion-icon{
-            color: $cor-branco;
-            font-size: rem(18);
-        }
-    }
-
-    .next{
-        margin-left: 32px;
-    }
+    @include setas;
 }

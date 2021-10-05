@@ -3,11 +3,20 @@
     margin-bottom: 200px;
 
     &__titulo {
+        padding-bottom: rem(32);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         h1 {
             @include tituloSecoes($cor-primaria);
+            
         }
 
-        padding-bottom: rem(32);
+        .navigation {
+            display: flex;
+            align-items: center;
+            @include setas;
+        }
     }
 
     .fundo {

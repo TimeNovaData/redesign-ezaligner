@@ -86,7 +86,8 @@ if (pageHome) { // ★ HOME
 } else if (pagePesquisar) { // ★ HOME  
     new Dom().bodyClass("body__pesquisar");
     const swiperProdutos = new Swiper(".swiper-produtos", config.propsProdutos2);
-    const swiperParceiros = new Swiper(".swiper-parceiros", config.propsParceiros);
+    const swiperDentistas = new Swiper(".swiper-dentistas", config.propsParceiros);
+    const swiperClinicas = new Swiper(".swiper-clinicas", config.propsClinicas);
     //menus();
     menuDropdown();
     comparador();
