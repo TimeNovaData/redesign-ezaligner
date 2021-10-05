@@ -63,8 +63,8 @@ const propsParceiros = {
         clickable: true,
     },
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.next',
+        prevEl: '.prev',
     },
     breakpoints: {
         320: {
