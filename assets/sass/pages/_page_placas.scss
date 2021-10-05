@@ -27,18 +27,19 @@
 
     &__wrapper {
         background: $cor-azul-background;
-        background-image: url("../img/page-alinhador/banner.png");
+        background-image: url("../img/page-placas/banner.png");
         background-repeat: no-repeat;
         background-size: cover;
-        padding: 110px;
+        padding: 142px;
         border-radius: 16px;
+        background-position: center;
 
         @include d(s) {
-            background-image: url("../img/page-alinhador/banner-mobile.png");
+            background-image: url("../img/page-placas/banner-mobile.png");
             padding: 0;
             height: 100%;
             background-size: cover;
-            height: rem(700);
+            height: rem(750);
             border-radius: 0;
         }
 
@@ -50,6 +51,8 @@
 
             @include d(s) {
                 justify-content: flex-end;
+                padding-left: rem(16);
+                padding-bottom: rem(64);
             }
 
             h1 {
@@ -60,7 +63,7 @@
 
                 @include d(s) {
                     font-weight: 700;
-                    text-align: center;
+                    
                     font-size: rem(32);
 
                 }
@@ -74,9 +77,25 @@
 
                 @include d(s) {
                     color: $cor-branco;
-                    text-align: center;
                     max-width: 290px;
-                    margin: 0 auto;
+                }
+            }
+
+            ul{
+                padding-top: 16px;
+                padding-left: 16px;
+                li{
+                    color: #E1F9F7;
+                    list-style: disc;
+                    font-size: rem(16);
+                    font-weight: 500;
+                    line-height: 160%;
+                    @include d(s){
+                        font-size: rem(14);
+                    }
+                    & + li{
+                        margin-top: 8px;
+                    }
                 }
             }
 
@@ -106,10 +125,6 @@
 }
 
 
-
-.passo__wrapper{
-    grid-template-columns: repeat(3, 1fr);
-}
 
 
 .possibilidades {
@@ -146,24 +161,31 @@
 }
 
 
-
 .banner__inferior {
     margin-bottom: 300px;
-
-    @include d(m) {
-        display: none;
+    @include d(m){
+        margin-bottom: 90px;
     }
 
+
     &-wrapper {
-        background-image: url("../img/page-alinhador/banner-rapaz.png");
+        background-image: url("../img/page-placas/banner-rapaz2.png");
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
         height: rem(550);
         border-radius: 16px;
         position: relative;
         display: flex;
         align-items: flex-start;
         justify-content: flex-end;
+        @include d(m){
+            background-image: url('');
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+        }
 
         &-box {
             background-color: $cor-roxo-escuro;
@@ -174,6 +196,11 @@
             padding: rem(32);
             border-radius: 16px;
             box-shadow: 0px 16px 56px rgba(79, 68, 104, 0.4);
+
+            @include d(m){
+                position: initial;
+
+            }
 
             h3 {
                 font-size: rem(24);
@@ -201,6 +228,9 @@
                         margin-left: 8px;
                         line-height: 160%;
                         font-size: rem(16);
+                        @include d(s){
+                            font-size: rem(14)
+                        }
                     }
                 }
             }
@@ -212,13 +242,14 @@
                 border-radius: 4px;
                 background-color: $cor-azul;
                 margin-top: 24px;
+                @include d(s){
+                    margin-top: 32px;
+                    padding: rem(20) rem(45);
+                }
             }
         }
     }
 }
-
-
-
 
 .secao__diferenciada {
     background-color: $cor-background-2;

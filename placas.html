@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.compilado.css">
+
+    <!-- gsap deixar no head -->
+    <!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+        integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+    <title>Modelo</title>
+
+</head>
+
+<body>
+
+    <main id="page__placas">
+        <!-- ☰ MENUS -->
+        <div class="menus">
+            <div class="menu__desktop">
+                <div class="container">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="index.html"><img src="assets/img/logo.png" class="logo"></a>
+                        <nav>
+                            <ul class="menu__desktop-atalhos">
+                                <li><a href="#">A ez</a></li>
+                                <li><a href="https://meuez.com.br/login/?next=/" target="_blank">Meu Ez</a></li>
+                                <li data-dropdown><span>Inscrições<ion-icon name="chevron-down-outline">
+                                        </ion-icon></span>
+                                    <ul class="menu__dropdown-submenu">
+                                        <li><a href="agenda.html">Tratamentos</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Saiba mais</a></li>
+                                <li>
+                                    <div class="menu__desktop-atalhos-midias">
+                                        <a href="mailto: sac@ezaligner.com"><img
+                                                src="assets/img/icones-midia/Mail.svg"></a>
+                                        <a href="tel:+55 213993-5060"><img src="assets/img/icones-midia/Phone.svg"></a>
+                                        <a href="https://www.instagram.com/ezaligner_br/" target="_blank"><img
+                                                src="assets/img/icones-midia/Instagram.svg"></a>
+                                        <a href="https://www.facebook.com/ezaligner.br" target="_blank"><img
+                                                src="assets/img/icones-midia/Facebook.svg"></a>
+                                        <a href="https://www.linkedin.com/company/ezaligner/"><img
+                                                src="assets/img/icones-midia/Linkedin.svg" target="_blank"></a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="btn__dropdown" data-dropdown>
+                                <span>Seja um Parceiro<ion-icon name="chevron-down-outline">
+                                    </ion-icon></span>
+                                <ul class="btn__dropdown-submenu">
+                                    <li><a href="dentista-parceiro.html">Seja um Dentista Credenciado</a></li>
+                                    <li><a href="clinica-parceira.html">Seja uma Cliníca Radiológica Credenciada</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!--MENU MOBILE-->
+            <div class="menu__mobile">
+                <div class="container d-flex justify-content-between align-items-center">
+                    <a href="index.html" class=" menu__mobile-logo"><img src="assets/img/logo.png"></a>
+                    <span class="menu__mobile-hamburger"></span>
+                    <nav class="menu__mobile__nav fundo">
+                        <ul class="menu__mobile__nav-atalhos">
+                            <li class="menu__dropdown-mobile parceiro">
+                                <span>Seja um parceiro<ion-icon name="chevron-down-outline">
+                                    </ion-icon></span>
+                                <div class="menu__dropdown-mobile-submenu">
+                                    <a href="dentista-parceiro.html" target="_blank">Seja um dentista credenciado</a>
+                                    <a href="clinica-parceira.html" target="_blank">Seja uma Cliníca Radiológica
+                                        Credenciado</a>
+                                </div>
+                            </li>
+                            <li class="menu__dropdown-mobile ">
+                                <span>Clinícas Digitais<ion-icon name="chevron-down-outline">
+                                    </ion-icon></span>
+                                <div class="menu__dropdown-mobile-submenu">
+                                    <a href="pesquisar.html">Encontre uma Clínica Radiológica Credenciada</a>
+                                </div>
+                            </li>
+                            <li><a href="https://meuez.com.br/login/?next=/" target="_blank">Meu Ez</a></li>
+                            <li class="menu__dropdown-mobile "><span>Inscrições<ion-icon name="chevron-down-outline">
+                                    </ion-icon></span>
+                                <div class="menu__dropdown-mobile-submenu">
+                                    <a href="agenda.html">Agenda de Credenciamento e Cursos Avançados</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="midias">
+                                    <a href="https://www.facebook.com/ezaligner.br" target="_blank"><img
+                                            src="assets/img/icones-midia/Facebook.svg"></a>
+                                    <a href="https://www.instagram.com/ezaligner_br/" target="_blank"><img
+                                            src="assets/img/icones-midia/Instagram.svg"></a>
+                                    <a href="https://www.linkedin.com/company/ezaligner/" target="_blank"><img
+                                            src="assets/img/icones-midia/Linkedin.svg"></a>
+                                    <a href="mailto: sac@ezaligner.com"><img src="assets/img/icones-midia/Mail.svg"></a>
+                                    <a href="tel:+55 213993-5060"><img src="assets/img/icones-midia/Phone.svg"></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- fim menus -->
+
+
+        <section class="introducao">
+            <div class="container">
+                <div class="introducao__wrapper">
+                    <div class="introducao__wrapper-texto col-lg-6">
+                        <h1>Placas de Proteção</h1>
+                        <p>Proteger sempre é bom, mas qual placa eu preciso?</p>
+                        <ul>
+                            <li>Placa de Proteção Esportiva</li>
+                            <li>Placa Miorrelaxante (Bruxismo)</li>
+                            <li>Placa Anti Ronco</li>
+                            <li>Placa de Contenção</li>
+                        </ul>
+                       
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="passo">
+            <div class="container">
+                <h1>Alinhe seus dentes, sorrir nunca foi tão fácil!</h1>
+                <div class="passo__wrapper">
+                    <div class="passo__wrapper-item">
+                        <div class="passo__wrapper-item-img">
+                            <span>01</span>
+                            <img src="assets/img/page-placas/foto-1.png">
+                        </div>
+                        <div class="passo__wrapper-item-info">
+                            <h3>Placa Miorrelaxante (Bruxismo)</h3>
+                            <p>Para quem range os dentes e/ou tem dor na face, ao redor dos músculos da mastigação.</p>
+                        </div>
+                    </div>
+                    <div class="passo__wrapper-item">
+                        <div class="passo__wrapper-item-img">
+                            <span>02</span>
+                            <img src="assets/img/page-placas/foto-2.png">
+                        </div>
+                        <div class="passo__wrapper-item-info">
+                            <h3>Placa Anti Ronco</h3>
+                            <p>Promove um avanço da mandíbula e melhora substancialmente o ronco.</p>
+                        </div>
+                    </div>
+                    <div class="passo__wrapper-item">
+                        <div class="passo__wrapper-item-img">
+                            <span>03</span>
+                            <img src="assets/img/page-placas/foto-3.png">
+                        </div>
+                        <div class="passo__wrapper-item-info">
+                            <h3>Proteção Esportiva </h3>
+                            <p>Placa de silicone bem grossa, para proteção de impactos nos dentes durante a prática de esportes de contado.</p>
+                        </div>
+                    </div>
+                    <div class="passo__wrapper-item">
+                        <div class="passo__wrapper-item-img">
+                            <span>04</span>
+                            <img src="assets/img/page-placas/foto-4.png">
+                        </div>
+                        <div class="passo__wrapper-item-info">
+                            <h3>Placa de Contenção</h3>
+                            <p>Placa para proteção noturna que ajuda a manter os dentes na posição correta. Pode ser usada durante o dia e não atrapalha a fala.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="possibilidades">
+            <div class="container">
+                <h1>Possibilidades</h1>
+                <div class="possibilidades__wrapper">
+                    <div class="comparador">
+                        <div class=" images">
+                            <div class="img1">
+                            </div>
+                            <div class="img2">
+                            </div>
+                        </div>
+                        <div class="range">
+                            <span>ANTES</span>
+                            <input type="range" min="0" max="100" step="1" value="50">
+                            <span>DEPOIS</span>
+                        </div>
+                    </div>
+                    <p></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="banner__inferior">
+            <div class="container">
+                <div class="banner__inferior-wrapper">
+                    <div class="banner__inferior-wrapper-box">
+                        <h3>Surpreenda-se com as Possibilidades</h3>
+                        <ul class="banner__inferior-wrapper-box-lista">
+                            <li>
+                                <img src="assets/img/check.svg">
+                                <p>As placas da ezaligner são feitas pelo processo digital que possibilita melhor encaixe.</p>
+                            </li>
+                            <li>
+                                <img src="assets/img/check.svg">
+                                <p>As placas são personalizados feitas sob medida para cada paciente.</p>
+                            </li>
+                            <li>
+                                <img src="assets/img/check.svg">
+                                <p> Pacientes com problemas de ronco sempre melhoram com a utilização da Placa Anti Ronco ezaligner.</p>
+                            </li>
+                            <li>
+                                <img src="assets/img/check.svg">
+                                <p>Para quem tem dores nos músculos da mastigação as Placas Miorrelaxante são indispensáveis.</p>
+                            </li>
+
+                        </ul>
+                        <a href="#" class="btn__encontre">Encontre um Credenciado</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="secao__diferenciada">
+            <section class="produtos">
+                <div class="container">
+                    <h1>Complete seu sorriso!</h1>
+                    <div class="swiper swiper-produtos">
+                        <div class="produtos__wrapper swiper-wrapper">
+                            <div class="produtos__wrapper-item swiper-slide">
+                                <div class="produtos__wrapper-item-img">
+                                    <img src="assets/img/produto-provisorio-4.jpg">
+                                </div>
+                                <div class="produtos__wrapper-item-texto">
+                                    <h3>Clareamento <br>
+                                        Dental ezwhite</h3>
+                                    <p>A cor e a forma perfeita para seu sorriso, e o melhor de tudo preservando o
+                                        máximo do
+                                        seu dente.</p>
+                                    <a href="#" class="btn__produtos">CONHEÇA</a>
+                                </div>
+                            </div>
+                            <div class="produtos__wrapper-item swiper-slide">
+                                <div class="produtos__wrapper-item-img">
+                                    <img src="assets/img/produto-provisorio-2.jpg">
+                                </div>
+                                <div class="produtos__wrapper-item-texto">
+                                    <h3>Lentes de Contato<br>
+                                        Dental • LenteSmile</h3>
+                                    <p>A cor e a forma perfeita para seu sorriso, e o melhor de tudo preservando o máximo do seu dente.</p>
+                                    <a href="#" class="btn__produtos">CONHEÇA</a>
+                                </div>
+                            </div>
+                            <div class="produtos__wrapper-item swiper-slide">
+                                <div class="produtos__wrapper-item-img">
+                                    <img src="assets/img/produto-provisorio-1.jpg">
+                                </div>
+                                <div class="produtos__wrapper-item-texto">
+                                    <h3>Alinhadores<br>
+                                        ezaligner</h3>
+                                    <p>Clareamento, contenção e muito mais. Seus dentes mais brancos e com menos
+                                        sensibilidade.
+                                    </p>
+                                    <a href="#" class="btn__produtos">CONHEÇA</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="duvidas">
+                <div class="container">
+                    <h1>Dúvidas</h1>
+                    <div class="duvidas__accordion">
+                        <div class="duvidas__accordion-item">
+                            <div class="pergunta" data-content="+">
+                                <h3>A Placa Anti Ronco é usada nas duas arcadas?</h3>
+
+                            </div>
+                            <div class="resposta">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                    industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                                    an
+                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="duvidas__accordion-item">
+                            <div class="pergunta" data-content="+">
+                                <h3>As placas são desconfortáveis?</h3>
+
+                            </div>
+                            <div class="resposta">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                    industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                                    an
+                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+
+
+        <section class="parceiros">
+            <div class="container">
+                <div class="parceiros__titulo">
+                    <h1>Clínicas &<br>
+                        Dentistas Parceiros</h1>
+                </div>
+                <div class="fundo"></div>
+                <div class="swiper swiper-parceiros">
+                    <div class="parceiros__wrapper swiper-wrapper">
+                        <div class="parceiros__wrapper-item swiper-slide" id="dentista__parceiro">
+                            <div class="parceiros__wrapper-item-img">
+                                <img src="assets/img/parceiro-provisiorio-1.jpg">
+                            </div>
+                            <div class="parceiros__wrapper-item-info">
+                                <div class="parceiros__wrapper-item-info-texto">
+                                    <span>Nome</span>
+                                    <p id="nome__dentista">Abrão Name Neto</p>
+                                </div>
+                                <div class="parceiros__wrapper-item-info-texto">
+                                    <span>CRO</span>
+                                    <p id="cro__dentista">69852</p>
+                                </div>
+                                <div class="parceiros__wrapper-item-info-texto">
+                                    <span>Especialização</span>
+                                    <p class="especializacao__dentista">Cirurgia e Traumatologia Buco-maxilo-faciais</p>
+                                </div>
+                                <div class="contato">
+                                    <a href="mailto: sac@ezaligner.com"><img src="assets/img/icones-midia/Mail.svg"></a>
+                                    <a href="tel:+55 213993-5060"><img src="assets/img/icones-midia/Phone.svg"></a>
+                                    <a href="#"><img src="assets/img/icones-midia/Whatsup.svg"></a>
+                                </div>
+                            </div>
+                            <a href="#" class="btn__conheca">CONHEÇA<ion-icon name="arrow-forward-outline"></ion-icon>
+                            </a>
+                        </div>
+
+                        <div class="parceiros__wrapper-item swiper-slide" id="clinica__parceira">
+                            <div class="parceiros__wrapper-item-img">
+                                <img src="assets/img/parceiro-provisiorio-2.jpg">
+                            </div>
+                            <div class="parceiros__wrapper-item-info">
+                                <div class="parceiros__wrapper-item-info-texto">
+                                    <span>Nome da clínica</span>
+                                    <p id="nome__clinica">CIROD - Alcântara</p>
+                                </div>
+                                <div class="parceiros__wrapper-item-info-texto">
+                                    <span>Especialização</span>
+                                    <p class="especializacao__dentista">Clínica de Exames</p>
+                                </div>
+                                <div class="contato">
+                                    <a href="mailto: sac@ezaligner.com"><img src="assets/img/icones-midia/Mail.svg"></a>
+                                    <a href="tel:+55 213993-5060"><img src="assets/img/icones-midia/Phone.svg"></a>
+                                    <a href="#"><img src="assets/img/icones-midia/Whatsup.svg"></a>
+                                </div>
+                            </div>
+                            <a href="#" class="btn__conheca">CONHEÇA<ion-icon name="arrow-forward-outline"></ion-icon>
+                            </a>
+                        </div>
+
+                        <div class="parceiros__wrapper-item swiper-slide" id="dentista__parceiro">
+                            <div class="parceiros__wrapper-item-img">
+                                <img src="assets/img/parceiro-provisiorio-1.jpg">
+                            </div>
+                            <div class="parceiros__wrapper-item-info">
+                                <div class="parceiros__wrapper-item-info-texto">
+                                    <span>Nome</span>
+                                    <p id="nome__dentista">Abrão Name Neto</p>
+                                </div>
+                                <div class="parceiros__wrapper-item-info-texto">
+                                    <span>CRO</span>
+                                    <p id="cro__dentista">69852</p>
+                                </div>
+                                <div class="parceiros__wrapper-item-info-texto">
+                                    <span>Especialização</span>
+                                    <p class="especializacao__dentista">Cirurgia e Traumatologia Buco-maxilo-faciais</p>
+                                </div>
+                                <div class="contato">
+                                    <a href="mailto: sac@ezaligner.com"><img src="assets/img/icones-midia/Mail.svg"></a>
+                                    <a href="tel:+55 213993-5060"><img src="assets/img/icones-midia/Phone.svg"></a>
+                                    <a href="#"><img src="assets/img/icones-midia/Whatsup.svg"></a>
+                                </div>
+                            </div>
+                            <a href="#" class="btn__conheca">CONHEÇA<ion-icon name="arrow-forward-outline"></ion-icon>
+                            </a>
+                        </div>
+                        <div class="parceiros__wrapper-item swiper-slide" id="clinica__parceira">
+                            <div class="parceiros__wrapper-item-img">
+                                <img src="assets/img/parceiro-provisiorio-2.jpg">
+                            </div>
+                            <div class="parceiros__wrapper-item-info">
+                                <div class="parceiros__wrapper-item-info-texto">
+                                    <span>Nome da clínica</span>
+                                    <p id="nome__clinica">CIROD - Alcântara</p>
+                                </div>
+                                <div class="parceiros__wrapper-item-info-texto">
+                                    <span>Especialização</span>
+                                    <p class="especializacao__dentista">Clínica de Exames</p>
+                                </div>
+                                <div class="contato">
+                                    <a href="mailto: sac@ezaligner.com"><img src="assets/img/icones-midia/Mail.svg"></a>
+                                    <a href="tel:+55 213993-5060"><img src="assets/img/icones-midia/Phone.svg"></a>
+                                    <a href="#"><img src="assets/img/icones-midia/Whatsup.svg"></a>
+                                </div>
+                            </div>
+                            <a href="#" class="btn__conheca">CONHEÇA<ion-icon name="arrow-forward-outline"></ion-icon>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--pesquisa footer-->
+        <section class="busca">
+            <div class="busca__avancada col-md-8 col-lg-12 mx-auto">
+                <div class="container">
+                    <div class="busca__avancada-wrapper">
+                        <h1>Busca avançada</h1>
+                        <form action="" class="busca__avancada-wrapper-campos col-lg-8  col-12 mx-auto">
+                            <div class="input__select">
+                                <label for="input_parceiros">Parceiros</label>
+                                <select id="input_parceiros">
+                                    <option value="0">Todos</option>
+                                </select>
+                            </div>
+                            <div class="input__select">
+                                <label for="input_tipo">Tipo</label>
+                                <select id="input_tipo">
+                                    <option value="0">Todos</option>
+                                </select>
+                            </div>
+                            <div class="input__box">
+                                <label for="input_cep">CEP</label>
+                                <input type="text" id="cep" placeholder="Digite seu CEP">
+                            </div>
+                            <button type="button" class="btn__pesquisar">Pesquisar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="busca__mapa">
+                <div class="container-fluid">
+                    <div class="busca__mapa-wrapper">
+                        <button class="btn__mapa">Ver no mapa</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- jquery -->
+    <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <!-- icones -->
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <!-- script main -->
+    <script type="module" src="assets/js/main.js"></script>
+
+    <!-- Boostrap 5, Popper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+        crossorigin="anonymous"></script> -->
+
+</body>
+
+</html>

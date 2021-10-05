@@ -12,12 +12,16 @@
     }
     &__wrapper{
         padding-top: rem(64);
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
         align-items: stretch;
         justify-content: space-between;
+        grid-gap: 64px;
         @include d(m){
+            display: flex;
             flex-direction: column;
             padding-top: rem(32);
+            grid-gap: 0;
         }
         &-item{
             display: flex;
