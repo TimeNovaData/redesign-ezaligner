@@ -27,19 +27,19 @@
 
     &__wrapper {
         background: $cor-azul-background;
-        background-image: url("../img/page-placas/banner.png");
+        background-image: url("../img/page-clareamento/banner.png");
         background-repeat: no-repeat;
         background-size: cover;
-        padding: 142px;
-        border-radius: 16px;
         background-position: center;
+        padding: 128px;
+        border-radius: 16px;
 
         @include d(s) {
-            background-image: url("../img/page-placas/banner-mobile.png");
+            background-image: url("../img/page-clareamento/banner-mobile.png");
             padding: 0;
             height: 100%;
             background-size: cover;
-            height: rem(750);
+            height: rem(700);
             border-radius: 0;
         }
 
@@ -51,8 +51,6 @@
 
             @include d(s) {
                 justify-content: flex-end;
-                padding-left: rem(16);
-                padding-bottom: rem(64);
             }
 
             h1 {
@@ -63,7 +61,7 @@
 
                 @include d(s) {
                     font-weight: 700;
-                    
+                    text-align: center;
                     font-size: rem(32);
 
                 }
@@ -77,25 +75,9 @@
 
                 @include d(s) {
                     color: $cor-branco;
+                    text-align: center;
                     max-width: 290px;
-                }
-            }
-
-            ul{
-                padding-top: 16px;
-                padding-left: 16px;
-                li{
-                    color: #E1F9F7;
-                    list-style: disc;
-                    font-size: rem(16);
-                    font-weight: 500;
-                    line-height: 160%;
-                    @include d(s){
-                        font-size: rem(14);
-                    }
-                    & + li{
-                        margin-top: 8px;
-                    }
+                    margin: 0 auto;
                 }
             }
 
@@ -124,8 +106,10 @@
     }
 }
 
-.passo__wrapper-item-img span{
-    color: $cor-primaria;
+
+
+.passo__wrapper{
+    grid-template-columns: repeat(3, 1fr);
 }
 
 
@@ -163,15 +147,16 @@
 }
 
 
+
 .banner__inferior {
     margin-bottom: 300px;
     @include d(m){
-        margin-bottom: 90px;
+        margin-bottom: 160px;
     }
-
+  
 
     &-wrapper {
-        background-image: url("../img/page-placas/banner-rapaz2.png");
+        background-image: url("../img/page-clareamento/banner-mulher.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -198,7 +183,6 @@
             padding: rem(32);
             border-radius: 16px;
             box-shadow: 0px 16px 56px rgba(79, 68, 104, 0.4);
-
             @include d(m){
                 position: initial;
 
@@ -231,7 +215,7 @@
                         line-height: 160%;
                         font-size: rem(16);
                         @include d(s){
-                            font-size: rem(14)
+                            font-size: rem(14);
                         }
                     }
                 }
@@ -244,14 +228,13 @@
                 border-radius: 4px;
                 background-color: $cor-azul;
                 margin-top: 24px;
-                @include d(s){
-                    margin-top: 32px;
-                    padding: rem(20) rem(45);
-                }
             }
         }
     }
 }
+
+
+
 
 .secao__diferenciada {
     background-color: $cor-background-2;

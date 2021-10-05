@@ -31,6 +31,7 @@ const pageHome = new Dom().el("#page__home");
 const pageAlinhador = new Dom().el("#page__alinhador");
 const pageLentes = new Dom().el("#page__lentes");
 const pagePlacas = new Dom().el("#page__placas");
+const pageClareamento = new Dom().el("#page__clareamento");
 
 
 if (pageHome) { // ★ HOME  
@@ -39,9 +40,7 @@ if (pageHome) { // ★ HOME
     const swiperParceiros = new Swiper(".swiper-parceiros", config.propsParceiros);
     //menus();
     menuDropdown();
-}
-
-else if (pageAlinhador) { // ★ HOME  
+} else if (pageAlinhador) { // ★ HOME  
     new Dom().bodyClass("body__alinhador");
     const swiperProdutos = new Swiper(".swiper-produtos", config.propsProdutos2);
     const swiperParceiros = new Swiper(".swiper-parceiros", config.propsParceiros);
@@ -49,11 +48,7 @@ else if (pageAlinhador) { // ★ HOME
     menuDropdown();
     comparador();
     initAccordion();
-}
-
-
-
-else if (pageLentes) { // ★ HOME  
+} else if (pageLentes) { // ★ HOME  
     new Dom().bodyClass("body__lentes");
     const swiperProdutos = new Swiper(".swiper-produtos", config.propsProdutos2);
     const swiperParceiros = new Swiper(".swiper-parceiros", config.propsParceiros);
@@ -61,10 +56,7 @@ else if (pageLentes) { // ★ HOME
     menuDropdown();
     comparador();
     initAccordion();
-}
-
-
-else if (pagePlacas) { // ★ HOME  
+} else if (pagePlacas) { // ★ HOME  
     new Dom().bodyClass("body__placas");
     const swiperProdutos = new Swiper(".swiper-produtos", config.propsProdutos2);
     const swiperParceiros = new Swiper(".swiper-parceiros", config.propsParceiros);
@@ -72,6 +64,15 @@ else if (pagePlacas) { // ★ HOME
     menuDropdown();
     comparador();
     initAccordion();
+    
+} else if (pageClareamento) { // ★ HOME  
+    new Dom().bodyClass("body__clareamento");
+    const swiperProdutos = new Swiper(".swiper-produtos", config.propsProdutos2);
+    const swiperParceiros = new Swiper(".swiper-parceiros", config.propsParceiros);
+    //menus();
+    menuDropdown();
+    comparador();
+
 }
 
 
