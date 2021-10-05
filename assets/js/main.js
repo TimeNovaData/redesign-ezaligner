@@ -33,6 +33,7 @@ const pageLentes = new Dom().el("#page__lentes");
 const pagePlacas = new Dom().el("#page__placas");
 const pageClareamento = new Dom().el("#page__clareamento");
 const pageSobre = new Dom().el("#page__sobre");
+const pagePesquisar= new Dom().el("#page__pesquisar");
 
 
 if (pageHome) { // ★ HOME  
@@ -74,11 +75,16 @@ if (pageHome) { // ★ HOME
     menuDropdown();
     comparador();
 
-}
-
-
-else if (pageSobre) { // ★ HOME  
+} else if (pageSobre) { // ★ HOME  
     new Dom().bodyClass("body__sobre");
+    const swiperProdutos = new Swiper(".swiper-produtos", config.propsProdutos2);
+    const swiperParceiros = new Swiper(".swiper-parceiros", config.propsParceiros);
+    //menus();
+    menuDropdown();
+    comparador();
+
+} else if (pagePesquisar) { // ★ HOME  
+    new Dom().bodyClass("body__pesquisar");
     const swiperProdutos = new Swiper(".swiper-produtos", config.propsProdutos2);
     const swiperParceiros = new Swiper(".swiper-parceiros", config.propsParceiros);
     //menus();

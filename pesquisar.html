@@ -30,8 +30,7 @@
 </head>
 
 <body>
-
-    <main id="page__sobre">
+    <main id="page__pesquisar">
         <!-- ☰ MENUS -->
         <div class="menus">
             <div class="menu__desktop">
@@ -128,89 +127,41 @@
         <!-- fim menus -->
 
 
-        <section class="quem__somos">
-            <div class="fundo">
-            </div>
+        <section class="intro__pesquisar">
             <div class="container">
-                <div class="quem__somos-texto">
-                    <h1 data-aos="fade-up" data-aos-duration="800">A Ez</h1>
-                    <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">Um pouquinho mais da nossa
-                        história</p>
+                <div class="intro__pesquisar-texto">
+                    <h1>Encontre aqui seu dentista ou clínica parceira</h1>
                 </div>
-                <div class="quem__somos-wrapper col-lg-8 mx-auto" data-aos="fade-up" data-aos-duration="800"
-                    data-aos-delay="200">
-                    <div class="quem__somos-wrapper-texto">
-                        <h2>A ezaligner foi criada para fazer de forma fácil, tratamentos odontológicos estéticos.
-                        </h2>
-                        <p>
-                            O nome ezaligner não foi escolhido ao acaso, o “ez” é uma abreviatura de “easy’” do inglês,
-                            que significa “fácil” e “aligner” significa alinhador. O conceito é trazer facilidade ao
-                            alinhamento dos dentes, não pensando exclusivamente em ortodontia, mas um sorriso com boa
-                            competência estética e funcional, mas como fazemos isso?</p>
-                        <p>Uma das nossas preocupações foi entregar os produtos com todos os acessórios que serão
-                            obrigatoriamente necessários durante o tratamento, por exemplo: nos alinhadores ezaligner o
-                            kit já vem acompanhado de <strong>ezcase, lixa para polimento, escova para limpeza do
-                                alinhador, todas as instruções no box, clareamento ezwhite (exclusivo), removedor de
-                                alinhador e os modelos impressos</strong>, no kit de clareamento já enviamos a pasta
-                            para dentes sensíveis, dentre outras coisas. Ou seja, a solução completa.</p>
-                        <p>Para ser fácil é necessário economizar o seu tempo e do seu paciente. Por isso temos um prazo
-                            de entrega dos alinhadores de 4 dias úteis após a aprovação do planejamento, 7 dias úteis
-                            para envio das lentes e só <strong>3 dias úteis para envio do planejamento</strong>. Com a
-                            expansão da ezaligner, seu intuito é descentralizar suas fábricas para que seu compromisso
-                            de entrega seja o mais rápida do mercado e seus tratamentos continuem em vigor.</p>
-                        <p>De modo a ajudar no tempo do dentista, tomamos várias medidas para entregar os planejamentos
-                            mais assertivos possíveis, assim, todo caso de alinhador é planejado por um de
-                            nossos <strong>ortodontistas</strong> que tem um curso de 30 horas sobre o sistema de
-                            planejamento e 6 meses no processo de treinamento ezaligner para enviar os planejamentos.
-                        </p>
-                        <p>No nosso processo de linha de produção utilizamos diversos insumos específicos que
-                            desenvolvemos com parceiros externos para garantir melhor resultado e manter consistência
-                            entre os tratamentos, como: <strong>resinas de impressão 3D, plástico de alinhadores PETG,
-                                escovas de polimento, seringa de clareamento</strong>. Alguns outros são produzidos pela
-                            própria ezaligner como:<strong>removedor de alinhador, placa de credenciado, etc</strong>.
-                        </p>
+                <div class="filtro col-lg-6 col-md-8 col-12 mx-auto">
+                    <div class="input__select">
+                        <label for="input_parceiros">Parceiros</label>
+                        <select id="input_parceiros">
+                            <option value="0">Todos</option>
+                        </select>
                     </div>
-                    <div class="quem__somos-wrapper-texto-mais">
-                        <h2>Mais da Ezaligner
-                        </h2>
-                        <div class="quem__somos-wrapper-texto-mais-item">
-                            <h3>Clinicas ez</h3>
-                            <p>São franquias de clínicas de odontologia estética que atendem exclusivamente pacientes
-                                para
-                                realizar os tratamentos ezaligner. As Clínicas ez não fazem tratamentos convencionais de
-                                dentista, como canal, implantes, blocos, etc. A ideia é que essas clínicas sejam também
-                                um
-                                apoio a todos os dentistas credenciados. Tudo foi bem testado e ajustado para iniciar o
-                                projeto de franquias, nos preocupamos na escolha de cada material, cada equipamento,
-                                processos operacionais e principalmente em fazer tratamentos fáceis e descomplicados.
-                                Escolhemos tratamentos e metodologias que fossem possíveis de reproduzir a qualidade em
-                                qualquer que seja nossa unidade. Podemos garantir que nosso tratamento vai ter o mesmo
-                                resultado em qualquer lugar do mundo.
-                            </p>
-                        </div>
-                        <div class="quem__somos-wrapper-texto-mais-item">
-                            <h3>Ezdoc</h3>
-                            <p>É a empresa que vende os produtos necessários para que nossos parceiros executem com
-                                melhor desempenho os tratamentos ezaligner. Para as franquias entregamos do papel toalha
-                                ao escâner, passando por impressos, café em grão, papelaria, etc. Tudo que as franquias
-                                e parceiros precisem para fazer tratamentos ezaligner tem na ezdoc.
-
-                            </p>
-                            <p>Venha fazer parte dessa história, você merece sucesso na forma ez!</p>
-                        </div>
+                    <div class="input__select">
+                        <label for="input_tipo">Tipo</label>
+                        <select id="input_tipo">
+                            <option value="0">Todos</option>
+                        </select>
                     </div>
+                    <div class="input__box">
+                        <label for="input_cep">CEP</label>
+                        <input type="text" id="cep" placeholder="Digite seu CEP">
+                    </div>
+                    <button type="button" class="btn__pesquisar">Pesquisar</button>
                 </div>
             </div>
         </section>
 
 
-        <section class="parceiros">
+        <section class="parceiros" id="dentistas">
+            <div class="fundo"></div>
             <div class="container">
                 <div class="parceiros__titulo">
-                    <h1>Clínicas &<br>
+                    <h1>
                         Dentistas Parceiros</h1>
                 </div>
-                <div class="fundo"></div>
                 <div class="swiper swiper-parceiros">
                     <div class="parceiros__wrapper swiper-wrapper">
                         <div class="parceiros__wrapper-item swiper-slide" id="dentista__parceiro">
@@ -240,18 +191,22 @@
                             </a>
                         </div>
 
-                        <div class="parceiros__wrapper-item swiper-slide" id="clinica__parceira">
+                        <div class="parceiros__wrapper-item swiper-slide" id="dentista__parceiro">
                             <div class="parceiros__wrapper-item-img">
-                                <img src="assets/img/parceiro-provisiorio-2.jpg">
+                                <img src="assets/img/parceiro-provisiorio-1.jpg">
                             </div>
                             <div class="parceiros__wrapper-item-info">
                                 <div class="parceiros__wrapper-item-info-texto">
-                                    <span>Nome da clínica</span>
-                                    <p id="nome__clinica">CIROD - Alcântara</p>
+                                    <span>Nome</span>
+                                    <p id="nome__dentista">Abrão Name Neto</p>
+                                </div>
+                                <div class="parceiros__wrapper-item-info-texto">
+                                    <span>CRO</span>
+                                    <p id="cro__dentista">69852</p>
                                 </div>
                                 <div class="parceiros__wrapper-item-info-texto">
                                     <span>Especialização</span>
-                                    <p class="especializacao__dentista">Clínica de Exames</p>
+                                    <p class="especializacao__dentista">Cirurgia e Traumatologia Buco-maxilo-faciais</p>
                                 </div>
                                 <div class="contato">
                                     <a href="mailto: sac@ezaligner.com"><img src="assets/img/icones-midia/Mail.svg"></a>
@@ -289,6 +244,113 @@
                             <a href="#" class="btn__conheca">CONHEÇA<ion-icon name="arrow-forward-outline"></ion-icon>
                             </a>
                         </div>
+
+                        <div class="parceiros__wrapper-item swiper-slide" id="dentista__parceiro">
+                            <div class="parceiros__wrapper-item-img">
+                                <img src="assets/img/parceiro-provisiorio-1.jpg">
+                            </div>
+                            <div class="parceiros__wrapper-item-info">
+                                <div class="parceiros__wrapper-item-info-texto">
+                                    <span>Nome</span>
+                                    <p id="nome__dentista">Abrão Name Neto</p>
+                                </div>
+                                <div class="parceiros__wrapper-item-info-texto">
+                                    <span>CRO</span>
+                                    <p id="cro__dentista">69852</p>
+                                </div>
+                                <div class="parceiros__wrapper-item-info-texto">
+                                    <span>Especialização</span>
+                                    <p class="especializacao__dentista">Cirurgia e Traumatologia Buco-maxilo-faciais</p>
+                                </div>
+                                <div class="contato">
+                                    <a href="mailto: sac@ezaligner.com"><img src="assets/img/icones-midia/Mail.svg"></a>
+                                    <a href="tel:+55 213993-5060"><img src="assets/img/icones-midia/Phone.svg"></a>
+                                    <a href="#"><img src="assets/img/icones-midia/Whatsup.svg"></a>
+                                </div>
+                            </div>
+                            <a href="#" class="btn__conheca">CONHEÇA<ion-icon name="arrow-forward-outline"></ion-icon>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="parceiros" id="clinicas">
+            <div class="container">
+                <div class="parceiros__titulo">
+                    <h1>Clínicas Parceiras</h1>
+                </div>
+                <div class="swiper swiper-parceiros">
+                    <div class="parceiros__wrapper swiper-wrapper">
+                        <div class="parceiros__wrapper-item swiper-slide" id="clinica__parceira">
+                            <div class="parceiros__wrapper-item-img">
+                                <img src="assets/img/parceiro-provisiorio-2.jpg">
+                            </div>
+                            <div class="parceiros__wrapper-item-info">
+                                <div class="parceiros__wrapper-item-info-texto">
+                                    <span>Nome da clínica</span>
+                                    <p id="nome__clinica">CIROD - Alcântara</p>
+                                </div>
+                                <div class="parceiros__wrapper-item-info-texto">
+                                    <span>Especialização</span>
+                                    <p class="especializacao__dentista">Clínica de Exames</p>
+                                </div>
+                                <div class="contato">
+                                    <a href="mailto: sac@ezaligner.com"><img src="assets/img/icones-midia/Mail.svg"></a>
+                                    <a href="tel:+55 213993-5060"><img src="assets/img/icones-midia/Phone.svg"></a>
+                                    <a href="#"><img src="assets/img/icones-midia/Whatsup.svg"></a>
+                                </div>
+                            </div>
+                            <a href="#" class="btn__conheca">CONHEÇA<ion-icon name="arrow-forward-outline"></ion-icon>
+                            </a>
+                        </div>
+                        <div class="parceiros__wrapper-item swiper-slide" id="clinica__parceira">
+                            <div class="parceiros__wrapper-item-img">
+                                <img src="assets/img/parceiro-provisiorio-2.jpg">
+                            </div>
+                            <div class="parceiros__wrapper-item-info">
+                                <div class="parceiros__wrapper-item-info-texto">
+                                    <span>Nome da clínica</span>
+                                    <p id="nome__clinica">CIROD - Alcântara</p>
+                                </div>
+                                <div class="parceiros__wrapper-item-info-texto">
+                                    <span>Especialização</span>
+                                    <p class="especializacao__dentista">Clínica de Exames</p>
+                                </div>
+                                <div class="contato">
+                                    <a href="mailto: sac@ezaligner.com"><img src="assets/img/icones-midia/Mail.svg"></a>
+                                    <a href="tel:+55 213993-5060"><img src="assets/img/icones-midia/Phone.svg"></a>
+                                    <a href="#"><img src="assets/img/icones-midia/Whatsup.svg"></a>
+                                </div>
+                            </div>
+                            <a href="#" class="btn__conheca">CONHEÇA<ion-icon name="arrow-forward-outline"></ion-icon>
+                            </a>
+                        </div>
+                        <div class="parceiros__wrapper-item swiper-slide" id="clinica__parceira">
+                            <div class="parceiros__wrapper-item-img">
+                                <img src="assets/img/parceiro-provisiorio-2.jpg">
+                            </div>
+                            <div class="parceiros__wrapper-item-info">
+                                <div class="parceiros__wrapper-item-info-texto">
+                                    <span>Nome da clínica</span>
+                                    <p id="nome__clinica">CIROD - Alcântara</p>
+                                </div>
+                                <div class="parceiros__wrapper-item-info-texto">
+                                    <span>Especialização</span>
+                                    <p class="especializacao__dentista">Clínica de Exames</p>
+                                </div>
+                                <div class="contato">
+                                    <a href="mailto: sac@ezaligner.com"><img src="assets/img/icones-midia/Mail.svg"></a>
+                                    <a href="tel:+55 213993-5060"><img src="assets/img/icones-midia/Phone.svg"></a>
+                                    <a href="#"><img src="assets/img/icones-midia/Whatsup.svg"></a>
+                                </div>
+                            </div>
+                            <a href="#" class="btn__conheca">CONHEÇA<ion-icon name="arrow-forward-outline"></ion-icon>
+                            </a>
+                        </div>
                         <div class="parceiros__wrapper-item swiper-slide" id="clinica__parceira">
                             <div class="parceiros__wrapper-item-img">
                                 <img src="assets/img/parceiro-provisiorio-2.jpg">
@@ -316,43 +378,6 @@
             </div>
         </section>
 
-        <!--pesquisa footer-->
-        <section class="busca">
-            <div class="busca__avancada col-md-8 col-lg-12 mx-auto">
-                <div class="container">
-                    <div class="busca__avancada-wrapper">
-                        <h1>Busca avançada</h1>
-                        <form action="" class="busca__avancada-wrapper-campos col-lg-8  col-12 mx-auto">
-                            <div class="input__select">
-                                <label for="input_parceiros">Parceiros</label>
-                                <select id="input_parceiros">
-                                    <option value="0">Todos</option>
-                                </select>
-                            </div>
-                            <div class="input__select">
-                                <label for="input_tipo">Tipo</label>
-                                <select id="input_tipo">
-                                    <option value="0">Todos</option>
-                                </select>
-                            </div>
-                            <div class="input__box">
-                                <label for="input_cep">CEP</label>
-                                <input type="text" id="cep" placeholder="Digite seu CEP">
-                            </div>
-                            <button type="button" class="btn__pesquisar">Pesquisar</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="busca__mapa">
-                <div class="container-fluid">
-                    <div class="busca__mapa-wrapper">
-                        <button class="btn__mapa">Ver no mapa</button>
-                    </div>
-                </div>
-            </div>
-
-        </section>
 
         <footer class="footer">
             <div class="container">
@@ -422,9 +447,6 @@
             </div>
         </footer>
     </main>
-
-
-
     <!-- jquery -->
     <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
