@@ -1,6 +1,7 @@
 & {
     background: $cor-background;
-    @include d(m){
+
+    @include d(m) {
         background: $cor-branco
     }
 
@@ -10,7 +11,7 @@
 
 
 .intro__pesquisar {
-    margin-top: 104px;
+    margin-top: 140px;
     margin-bottom: 240px;
     position: relative;
     padding: 200px 0;
@@ -154,16 +155,18 @@
 }
 
 
-.parceiros{
-    .fundo{
+.parceiros {
+    .fundo {
         display: none;
-        @include d(m){
+
+        @include d(m) {
             display: block;
             bottom: -56px;
             height: 100%;
         }
     }
-    &__titulo{
+
+    &__titulo {
         padding-bottom: 0;
     }
 }
