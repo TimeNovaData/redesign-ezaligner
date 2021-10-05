@@ -16,6 +16,9 @@
             display: flex;
             align-items: center;
             @include setas;
+            @include d(m){
+                display: none;
+            }
         }
     }
 
@@ -126,3 +129,5 @@
         }
     }
 }
+
+
