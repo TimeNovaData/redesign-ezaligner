@@ -1,0 +1,56 @@
+.modal__parceiros {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    position: fixed;
+    z-index: 1000;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+
+    &-informacoes {
+        background: $cor-primaria;
+        max-width: 800px;
+        width: 100%;
+        padding: 2rem;
+        border-radius: 16px;
+
+        &-nav {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            h2{
+                color: $cor-branco;
+                font-weight: 600;
+                font-size: rem(24);
+            }
+
+          .fechar{
+              cursor: pointer;
+          }
+
+        }
+
+        &-coluna1 {
+            padding-top: 1.5rem;
+            display: flex;
+            align-items: stretch;
+
+            .foto__dentista {
+                padding-right: 2rem;
+                img{
+                    border-radius: 8px;
+                }
+            }
+            .mapa__local{
+                img{
+                    border-radius: 8px;
+                }
+                
+            }
+        }
+    }
+}
