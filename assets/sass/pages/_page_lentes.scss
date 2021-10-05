@@ -27,18 +27,19 @@
 
     &__wrapper {
         background: $cor-azul-background;
-        background-image: url("../img/page-alinhador/banner.png");
+        background-image: url("../img/page-lentes/banner.png");
         background-repeat: no-repeat;
         background-size: cover;
         padding: 110px;
         border-radius: 16px;
+        background-position: center;
 
         @include d(s) {
-            background-image: url("../img/page-alinhador/banner-mobile.png");
+            background-image: url("../img/page-lentes/banner-mobile.png");
             padding: 0;
             height: 100%;
             background-size: cover;
-            height: rem(700);
+            height: rem(750);
             border-radius: 0;
         }
 
@@ -142,7 +143,6 @@
 }
 
 
-
 .banner__inferior {
     margin-bottom: 300px;
 
@@ -151,9 +151,10 @@
     }
 
     &-wrapper {
-        background-image: url("../img/page-alinhador/banner-rapaz.png");
+        background-image: url("../img/page-lentes/banner-mulher.png");
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
         height: rem(550);
         border-radius: 16px;
         position: relative;

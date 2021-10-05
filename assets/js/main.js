@@ -29,6 +29,7 @@ const telaMenor = window.matchMedia('(max-width: 1024px)').matches;
 // PAGES 
 const pageHome = new Dom().el("#page__home");
 const pageAlinhador = new Dom().el("#page__alinhador");
+const pageLentes = new Dom().el("#page__lentes");
 
 
 if (pageHome) { // ★ HOME  
@@ -39,8 +40,20 @@ if (pageHome) { // ★ HOME
     menuDropdown();
 }
 
-if (pageAlinhador) { // ★ HOME  
+else if (pageAlinhador) { // ★ HOME  
     new Dom().bodyClass("body__alinhador");
+    const swiperProdutos = new Swiper(".swiper-produtos", config.propsProdutos2);
+    const swiperParceiros = new Swiper(".swiper-parceiros", config.propsParceiros);
+    //menus();
+    menuDropdown();
+    comparador();
+    initAccordion();
+}
+
+
+
+else if (pageLentes) { // ★ HOME  
+    new Dom().bodyClass("body__lentes");
     const swiperProdutos = new Swiper(".swiper-produtos", config.propsProdutos2);
     const swiperParceiros = new Swiper(".swiper-parceiros", config.propsParceiros);
     //menus();

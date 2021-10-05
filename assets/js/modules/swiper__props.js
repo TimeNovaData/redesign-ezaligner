@@ -35,6 +35,7 @@ const propsProdutos = {
             centeredSlides: false,
             spaceBetween: 32,
             
+            
         },
 
     }
