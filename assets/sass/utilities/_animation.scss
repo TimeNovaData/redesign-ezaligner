@@ -53,14 +53,28 @@
 }
 
 
-@keyframes sobeModal{
-    from{
+@keyframes sobeModal {
+    from {
         opacity: 0;
-        transform: translate3d(0, 110vh,0);
+        transform: translate3d(0, 110vh, 0);
     }
-    to{
+
+    to {
         opacity: 1;
-        transform: translate3d(0, 0,0);
+        transform: translate3d(0, 0, 0);
+
+    }
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -30px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
 
     }
 }

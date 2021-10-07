@@ -72,6 +72,11 @@
                     @include botao($cor-branco);
                     margin: 40px auto 0 auto;
                     padding: rem(20) rem(40);
+                    transition: background .3s ease-in;
+                    &:hover,
+                    &:focus {
+                        background: $cor-roxo;
+                    }
                 }
             }
         }

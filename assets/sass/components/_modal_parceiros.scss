@@ -265,3 +265,8 @@
     display: flex;
 }
 
+
+.modal__parceiros.modalOn .modal__parceiros-padrao{
+    animation: modal .3s forwards;
+}
+
