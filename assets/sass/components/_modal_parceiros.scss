@@ -90,7 +90,7 @@
         }
 
         &-coluna2 {
-            padding-top: 24px;
+            padding-top: 2rem;
             display: flex;
             align-items: stretch;
             justify-content: space-between;
@@ -99,6 +99,9 @@
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 align-items: stretch;
+                @include d(m){
+                    padding-top: 1.5rem;
+                }
             }
 
             .informacoes__parceiro {
@@ -191,11 +194,6 @@
                 .contato {
                     display: flex;
                     flex-direction: column;
-
-                    @include d(m) {
-                        padding-top: 1.5rem;
-                    }
-
                     a {
                         display: flex;
                         align-items: center;

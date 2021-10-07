@@ -31,6 +31,10 @@
             border-radius: 16px;
             background-color: $cor-branco;
             max-width: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
             @include d(m){
                 max-width: auto;
             }
@@ -50,6 +54,8 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                justify-content: space-between;
+           
 
                 h3 {
                     font-size: rem(24);
