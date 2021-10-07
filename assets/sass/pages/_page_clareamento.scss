@@ -93,6 +93,14 @@
                     padding: rem(24) rem(64);
                     border-radius: 8px;
                     background: $cor-azul;
+                    border: 1px solid $cor-azul;
+                    transition: color .3s ease-in, background .3s ease-in;
+
+                    &:hover,
+                    &:focus {
+                        background: transparent;
+                        color: $cor-branco;
+                    }
 
                     @include d(s) {
                         margin-top: 32px;
@@ -225,6 +233,14 @@
                 border-radius: 4px;
                 background-color: $cor-azul;
                 margin-top: 24px;
+                border: 1px solid $cor-azul;
+                transition: color .3s ease-in, background .3s ease-in;
+
+                &:hover,
+                &:focus {
+                    background: transparent;
+                    color: $cor-azul;
+                }
             }
         }
     }

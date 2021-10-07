@@ -33,5 +33,4 @@ export default function initiModal(){
 
     containerModal.addEventListener('click', cliqueForaModal);
 
-
 }
