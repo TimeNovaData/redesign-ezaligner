@@ -17,8 +17,8 @@ import comparador from './modules/comparador.js';
 import menus from './modules/menu-bruno.js';
 import menuDropdown from './modules/dropdown.js';
 import initAccordion from './modules/accordion.js';
-//import modalFormulario from './modules/modal-formulario.js';
-//import modalTermos from './modules/modal.js';
+import initModal from './modules/modal.js';
+
 
 
 
@@ -91,7 +91,7 @@ if (pageHome) { // ★ HOME
     menus();
     menuDropdown();
     comparador();
-
+    initModal();
 }
 
 
