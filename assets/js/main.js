@@ -40,13 +40,13 @@ if (pageHome) { // ★ HOME
     new Dom().bodyClass("body__home");
     const swiperProdutos = new Swiper(".swiper-produtos", config.propsProdutos);
     const swiperParceiros = new Swiper(".swiper-parceiros", config.propsParceiros);
-    //menus();
+    menus();
     menuDropdown();
 } else if (pageAlinhador) { // ★ HOME  
     new Dom().bodyClass("body__alinhador");
     const swiperProdutos = new Swiper(".swiper-produtos", config.propsProdutos2);
     const swiperParceiros = new Swiper(".swiper-parceiros", config.propsParceiros);
-    //menus();
+    menus();
     menuDropdown();
     comparador();
     initAccordion();
@@ -54,7 +54,7 @@ if (pageHome) { // ★ HOME
     new Dom().bodyClass("body__lentes");
     const swiperProdutos = new Swiper(".swiper-produtos", config.propsProdutos2);
     const swiperParceiros = new Swiper(".swiper-parceiros", config.propsParceiros);
-    //menus();
+    menus();
     menuDropdown();
     comparador();
     initAccordion();
@@ -62,7 +62,7 @@ if (pageHome) { // ★ HOME
     new Dom().bodyClass("body__placas");
     const swiperProdutos = new Swiper(".swiper-produtos", config.propsProdutos2);
     const swiperParceiros = new Swiper(".swiper-parceiros", config.propsParceiros);
-    //menus();
+    menus();
     menuDropdown();
     comparador();
     initAccordion();
@@ -71,7 +71,7 @@ if (pageHome) { // ★ HOME
     new Dom().bodyClass("body__clareamento");
     const swiperProdutos = new Swiper(".swiper-produtos", config.propsProdutos2);
     const swiperParceiros = new Swiper(".swiper-parceiros", config.propsParceiros);
-    //menus();
+    menus();
     menuDropdown();
     comparador();
 
@@ -79,7 +79,7 @@ if (pageHome) { // ★ HOME
     new Dom().bodyClass("body__sobre");
     const swiperProdutos = new Swiper(".swiper-produtos", config.propsProdutos2);
     const swiperParceiros = new Swiper(".swiper-parceiros", config.propsParceiros);
-    //menus();
+    menus();
     menuDropdown();
     comparador();
 
@@ -88,7 +88,7 @@ if (pageHome) { // ★ HOME
     const swiperProdutos = new Swiper(".swiper-produtos", config.propsProdutos2);
     const swiperDentistas = new Swiper(".swiper-dentistas", config.propsParceiros);
     const swiperClinicas = new Swiper(".swiper-clinicas", config.propsClinicas);
-    //menus();
+    menus();
     menuDropdown();
     comparador();
 
