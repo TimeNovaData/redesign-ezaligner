@@ -118,8 +118,14 @@
                         color: $cor-branco;
                     }
 
+                    @include d(m) {
+                        padding: 1.125rem 1.5rem;
+                    }
+
                     @include d(s) {
                         margin-top: 32px;
+                        padding: rem(24) rem(64);
+
                     }
                 }
             }
@@ -261,6 +267,10 @@
                     background: transparent;
                     color: $cor-azul;
                 }
+                @include d(s) {
+                    margin-top: 32px;
+                    padding: rem(20) rem(45);
+                }
             }
         }
     }
@@ -276,5 +286,6 @@
 
     @include d(m) {
         margin-bottom: 90px;
+        padding: 3rem 0 0 0;
     }
 }

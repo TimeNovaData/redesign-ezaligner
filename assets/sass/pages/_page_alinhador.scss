@@ -261,6 +261,10 @@
                     background: transparent;
                     color: $cor-azul;
                 }
+                @include d(s) {
+                    margin-top: 32px;
+                    padding: rem(20) rem(45);
+                }
             }
         }
     }
