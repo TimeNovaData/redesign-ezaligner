@@ -12,7 +12,8 @@
     margin-top: 140px;
     margin-bottom: 160px;
     position: relative;
-    @include d(m){
+
+    @include d(m) {
         margin-bottom: 90px;
     }
 
@@ -36,7 +37,8 @@
         padding: 142px;
         border-radius: 16px;
         background-position: center;
-        @include d(m){
+
+        @include d(m) {
             padding: 4rem;
         }
 
@@ -66,7 +68,8 @@
                 font-weight: 900;
                 line-height: 140%;
                 color: $cor-branco;
-                @include d(m){
+
+                @include d(m) {
                     font-size: 2.5rem;
                 }
 
@@ -82,7 +85,8 @@
                 font-size: rem(16);
                 font-weight: 400;
                 color: $cor-branco-2;
-                @include d(m){
+
+                @include d(m) {
                     font-size: .875rem;
                 }
 
@@ -102,10 +106,11 @@
                     font-size: rem(16);
                     font-weight: 500;
                     line-height: 160%;
-                    @include d(m){
+
+                    @include d(m) {
                         font-size: .875rem;
                     }
-                  
+
 
                     &+li {
                         margin-top: 8px;

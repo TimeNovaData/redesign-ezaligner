@@ -101,7 +101,9 @@
 
             &-botoes {
                 padding-top: rem(40);
-
+                @include d(m){
+                    padding-top: 2rem;
+                }
                 @include d(s) {
                     display: flex;
                     flex-direction: column;
@@ -267,6 +269,8 @@
                     background: transparent;
                     color: $cor-azul;
                 }
+
+                
 
                 @include d(s) {
                     margin-top: 32px;
