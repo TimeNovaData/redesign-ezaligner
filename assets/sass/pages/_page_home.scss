@@ -92,6 +92,11 @@
                 @include botao($cor-branco);
                 padding: rem(24) rem(64);
                 border-radius: 8px;
+                transition: background .3s ease-in;
+                &:hover,
+                &:focus {
+                    background: $cor-roxo;
+                }
             }
 
             .btn__duvidas {
