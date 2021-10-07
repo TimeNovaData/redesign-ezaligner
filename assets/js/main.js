@@ -33,7 +33,7 @@ const pageLentes = new Dom().el("#page__lentes");
 const pagePlacas = new Dom().el("#page__placas");
 const pageClareamento = new Dom().el("#page__clareamento");
 const pageSobre = new Dom().el("#page__sobre");
-const pagePesquisar= new Dom().el("#page__pesquisar");
+const pagePesquisar = new Dom().el("#page__pesquisar");
 
 
 if (pageHome) { // ★ HOME  
@@ -42,6 +42,7 @@ if (pageHome) { // ★ HOME
     const swiperParceiros = new Swiper(".swiper-parceiros", config.propsParceiros);
     menus();
     menuDropdown();
+    initModal();
 } else if (pageAlinhador) { // ★ HOME  
     new Dom().bodyClass("body__alinhador");
     const swiperProdutos = new Swiper(".swiper-produtos", config.propsProdutos2);
@@ -50,6 +51,7 @@ if (pageHome) { // ★ HOME
     menuDropdown();
     comparador();
     initAccordion();
+    initModal();
 } else if (pageLentes) { // ★ HOME  
     new Dom().bodyClass("body__lentes");
     const swiperProdutos = new Swiper(".swiper-produtos", config.propsProdutos2);
@@ -58,6 +60,7 @@ if (pageHome) { // ★ HOME
     menuDropdown();
     comparador();
     initAccordion();
+    initModal();
 } else if (pagePlacas) { // ★ HOME  
     new Dom().bodyClass("body__placas");
     const swiperProdutos = new Swiper(".swiper-produtos", config.propsProdutos2);
@@ -66,6 +69,7 @@ if (pageHome) { // ★ HOME
     menuDropdown();
     comparador();
     initAccordion();
+    initModal();
 
 } else if (pageClareamento) { // ★ HOME  
     new Dom().bodyClass("body__clareamento");
@@ -74,6 +78,7 @@ if (pageHome) { // ★ HOME
     menus();
     menuDropdown();
     comparador();
+    initModal();
 
 } else if (pageSobre) { // ★ HOME  
     new Dom().bodyClass("body__sobre");
@@ -82,6 +87,7 @@ if (pageHome) { // ★ HOME
     menus();
     menuDropdown();
     comparador();
+    initModal();
 
 } else if (pagePesquisar) { // ★ HOME  
     new Dom().bodyClass("body__pesquisar");

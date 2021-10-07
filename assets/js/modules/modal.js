@@ -11,13 +11,17 @@ export default function initiModal(){
 
     function modalOff(evento){
         evento.preventDefault();
-        containerModal.classList.add("modalOff");
+        containerModal.classList.remove("modalOn");
     }
 
-    
+
 
     abrirModal.forEach((botao)=>{
         botao.addEventListener("click", modalOn);
+    })
+
+    fecharModal.forEach((botao)=>{
+        botao.addEventListener("click", modalOff);
     })
 
 
