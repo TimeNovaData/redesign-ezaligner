@@ -12,8 +12,11 @@
     margin-top: 140px;
     margin-bottom: 160px;
     position: relative;
+    @include d(m){
+        margin-bottom: 90px;
+    }
 
-    @include d(m) {
+    @include d(s) {
         margin-top: 98px;
         margin-bottom: 90px;
     }
@@ -33,6 +36,9 @@
         padding: 142px;
         border-radius: 16px;
         background-position: center;
+        @include d(m){
+            padding: 4rem;
+        }
 
         @include d(s) {
             background-image: url("../img/page-placas/banner-mobile.png");
@@ -60,10 +66,12 @@
                 font-weight: 900;
                 line-height: 140%;
                 color: $cor-branco;
+                @include d(m){
+                    font-size: 2.5rem;
+                }
 
                 @include d(s) {
                     font-weight: 700;
-
                     font-size: rem(32);
 
                 }
@@ -74,6 +82,9 @@
                 font-size: rem(16);
                 font-weight: 400;
                 color: $cor-branco-2;
+                @include d(m){
+                    font-size: .875rem;
+                }
 
                 @include d(s) {
                     color: $cor-branco;
@@ -91,10 +102,10 @@
                     font-size: rem(16);
                     font-weight: 500;
                     line-height: 160%;
-
-                    @include d(s) {
-                        font-size: rem(14);
+                    @include d(m){
+                        font-size: .875rem;
                     }
+                  
 
                     &+li {
                         margin-top: 8px;
