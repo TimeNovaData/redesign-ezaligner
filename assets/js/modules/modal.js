@@ -15,6 +15,10 @@ export default function initiModal(){
     }
 
 
+    function cliqueForaModal(evento){
+        modalOff(evento);
+    }
+
 
     abrirModal.forEach((botao)=>{
         botao.addEventListener("click", modalOn);
@@ -23,6 +27,8 @@ export default function initiModal(){
     fecharModal.forEach((botao)=>{
         botao.addEventListener("click", modalOff);
     })
+
+    containerModal.addEventListener('click', cliqueForaModal);
 
 
     
