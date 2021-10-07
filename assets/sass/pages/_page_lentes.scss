@@ -12,8 +12,10 @@
     margin-top: 140px;
     margin-bottom: 160px;
     position: relative;
-
-    @include d(m) {
+    @include d(m){
+        margin-bottom: 90px;
+    }
+    @include d(s) {
         margin-top: 98px;
         margin-bottom: 90px;
     }
@@ -33,6 +35,12 @@
         padding: 110px;
         border-radius: 16px;
         background-position: center;
+
+        @include d(m) {
+            padding: 4rem;
+            background-position: center;
+        }
+
 
         @include d(s) {
             background-image: url("../img/page-lentes/banner-mobile.png");
@@ -59,6 +67,11 @@
                 line-height: 140%;
                 color: $cor-branco;
 
+                @include d(m) {
+                    font-size: 2.5rem;
+                }
+
+
                 @include d(s) {
                     font-weight: 700;
                     text-align: center;
@@ -72,6 +85,11 @@
                 font-size: rem(16);
                 font-weight: 400;
                 color: $cor-branco-2;
+
+                @include d(m) {
+                    font-size: .875rem;
+                    max-width: 400px;
+                }
 
                 @include d(s) {
                     color: $cor-branco;
@@ -105,8 +123,14 @@
                         color: $cor-branco;
                     }
 
+                    @include d(m) {
+                        padding: 1.125rem 1.5rem;
+                    }
+
                     @include d(s) {
                         margin-top: 32px;
+                        padding: rem(24) rem(64);
+
                     }
                 }
             }

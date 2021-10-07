@@ -12,8 +12,10 @@
     margin-top: 140px;
     margin-bottom: 160px;
     position: relative;
-
-    @include d(m) {
+    @include d(m){
+        margin-bottom: 90px;
+    }
+    @include d(s) {
         margin-top: 98px;
         margin-bottom: 90px;
     }
@@ -32,6 +34,10 @@
         background-size: cover;
         padding: 110px;
         border-radius: 16px;
+        @include d(m){
+            padding: 4rem;
+            background-position: center;
+        }
 
         @include d(s) {
             background-image: url("../img/page-alinhador/banner-mobile.png");
@@ -57,6 +63,9 @@
                 font-weight: 900;
                 line-height: 140%;
                 color: $cor-branco;
+                @include d(m){
+                    font-size: 2.5rem;
+                }
 
                 @include d(s) {
                     font-weight: 700;
@@ -71,6 +80,10 @@
                 font-size: rem(16);
                 font-weight: 400;
                 color: $cor-branco-2;
+                @include d(m){
+                    font-size: .875rem;
+                    max-width: 400px;
+                }
 
                 @include d(s) {
                     color: $cor-branco;
@@ -97,15 +110,18 @@
                     background: $cor-azul;
                     border: 1px solid $cor-azul;
                     transition: color .3s ease-in, background .3s ease-in;
-
                     &:hover,
                     &:focus {
                         background: transparent;
                         color: $cor-branco;
                     }
+                    @include d(m){
+                        padding: 1.125rem 1.625rem;
+                    }
 
                     @include d(s) {
                         margin-top: 32px;
+                        padding: rem(24) rem(64);
                     }
                 }
             }
