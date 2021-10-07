@@ -1,6 +1,9 @@
 .parceiros {
     position: relative;
     margin-bottom: 200px;
+    @include d(m){
+        margin-bottom: 90px;
+    }
 
     &__titulo {
         padding-bottom: rem(32);
