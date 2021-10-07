@@ -16,7 +16,10 @@ export default function initiModal(){
 
 
     function cliqueForaModal(evento){
-        modalOff(evento);
+        if(evento.target === this){
+            modalOff(evento);
+        }
+       
     }
 
 
@@ -30,7 +33,5 @@ export default function initiModal(){
 
     containerModal.addEventListener('click', cliqueForaModal);
 
-
-    
 
 }
