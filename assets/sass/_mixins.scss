@@ -298,7 +298,7 @@
 
 
 @mixin setas {
-    
+
     .prev,
     .next {
         background: $cor-primaria;
@@ -728,6 +728,28 @@
 
         @include d(ss) {
             max-height: rem(210);
+        }
+    }
+
+}
+
+
+@mixin pagination {
+    .swiper-pagination{
+        display: none;
+        @include d(m){
+            display: block;
+        }
+        &-bullet {
+            width: 16px;
+            border-radius: 4px;
+            background: #E5DEF1;
+    
+            &-active {
+                width: 40px;
+                border-radius: 4px;
+                background: #956AA7;
+            }
         }
     }
 
