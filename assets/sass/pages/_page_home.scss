@@ -27,7 +27,7 @@
         background-repeat: no-repeat;
         background-position-x: right;
         padding: 110px;
-
+     
         @include d(s) {
             background-image: url('');
             padding: 0;
