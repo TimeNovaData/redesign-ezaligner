@@ -33,7 +33,7 @@ const propsProdutos = {
         1280: {
             slidesPerView: 4,
             centeredSlides: false,
-            spaceBetween: 32,
+            spaceBetween: 16,
             
             
         },
@@ -81,7 +81,7 @@ const propsParceiros = {
         1280: {
             slidesPerView: 4,
             centeredSlides: false,
-            spaceBetween: 32,
+            spaceBetween: 16,
             
         },
 
@@ -302,7 +302,7 @@ const propsProdutos2 = {
         1280: {
             slidesPerView: 3,
             centeredSlides: false,
-            spaceBetween: 32,
+            spaceBetween: 16,
             
         },
 
@@ -345,7 +345,7 @@ const propsClinicas = {
         1280: {
             slidesPerView: 4,
             centeredSlides: false,
-            spaceBetween: 32,
+            spaceBetween: 16,
             
         },
 

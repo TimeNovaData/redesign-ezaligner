@@ -31,8 +31,10 @@
         }
 
         &-menu {
-            display: flex;
-            justify-content: space-between;
+           display: grid;
+           grid-template-columns: repeat(4, 1fr);
+           justify-content: space-between;
+            grid-gap: 2rem;
 
             @include d(m) {
                 margin-top: 56px;
