@@ -87,7 +87,12 @@
                         color: $cor-primaria;
                         font-weight: 500;
                         width: 100%;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        -webkit-appearance: none;
                     }
+
+                 
 
                     &+.input__select {
                         margin-left: 24px;

@@ -283,7 +283,7 @@
 
 .secao__diferenciada {
     background-color: $cor-background-2;
-    padding: rem(80) 0;
+    padding: rem(80) 0 0 0;
     margin-bottom: 160px;
 
     @include d(m) {
