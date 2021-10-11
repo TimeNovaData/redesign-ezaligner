@@ -76,6 +76,17 @@
             display: flex;
             flex-direction: column;
             width: 100%;
+            position: relative;
+            &::after {
+                content: 'arrow_drop_down';
+                font-family: 'material icons';
+                position: absolute;
+                top: rem(47);
+                right: 10px;
+                pointer-events: none;
+                font-size: 22px;
+                color: $cor-primaria;
+            }
 
             label {
                 color: $cor-preto-2;
